@@ -5,7 +5,8 @@ import Link from "next/link";
 
 export default function Header() {
     return (
-        <header className="flex items-center justify-between px-12 py-4 bg-slate-950 text-white">
+        <header className="flex items-center justify-between px-12 py-4 bg-slate-950 text-white
+        sticky top-0 z-50 shadow-md">
             <Image src={'/header-logo.png'} alt="header-logo-image" width={120} height={80} />
 
             {/* desktop nav */}
