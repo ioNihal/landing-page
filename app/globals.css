@@ -9,16 +9,17 @@
 
 @utility bg-grid {
   background-image:
-    linear-gradient(to right, rgba(138, 66, 245, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(138, 66, 245, 0.1) 1px, transparent 1px);
-  background-size: 60px 60px;
-  animation: grid-flow 1s linear infinite;
+    linear-gradient(to right, rgba(138, 66, 245, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(138, 66, 245, 0.08) 1px, transparent 1px);
+  background-size: 80px 80px;
 }
 
 @utility shadow-gradient {
-  /* @apply shadow-[-2px_0_10px_2px_#00D3F399] shadow-[2px_0_10px_2px_#C27AFF99]; */
-  box-shadow: -1px 0 10px 0px #00D3F3, 1px 0 10px 0px #C27AFF;
+  box-shadow:
+    -1px 0 10px rgba(0, 211, 243, 0.6),
+     1px 0 10px rgba(194, 122, 255, 0.6);
 }
+
 
 @keyframes grid-flow {
   from {
