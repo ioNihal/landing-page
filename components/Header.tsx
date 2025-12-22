@@ -10,7 +10,7 @@ export default function Header() {
 
             {/* desktop nav */}
             <nav>
-                <ul className="flex gap-6">
+                <ul className="flex gap-6 *:hover:text-cyan-400 cursor-pointer">
                     <li className="inline-flex gap-2">All AI Tools <ChevronDown /></li>
                     <li><Link href="/">All Tasks</Link></li>
                     <li><Link href="/">All Deals</Link></li>
@@ -21,7 +21,8 @@ export default function Header() {
                 <Link href={'/'} className="">
                     <LogIn />
                 </Link>
-                <Link href={"/"} className="flex items-center justify-center gap-2 bg-linear-to-r from-cyan-400 to-blue-600
+                <Link href={"/"} className="flex items-center justify-center gap-2
+                 bg-linear-to-r from-cyan-400 to-blue-600
                 px-6 py-2 rounded-sm text-sm">Submit AI Tool <MoveRight /></Link>
             </div>
         </header>
