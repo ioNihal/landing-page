@@ -1,7 +1,6 @@
-import { Brain, ExternalLink, Star, Zap } from "lucide-react";
+import { Brain, Zap } from "lucide-react";
 import Searchbox from "./Searchbox";
 import Link from "next/link";
-import Image from "next/image";
 import { FeaturedTool } from "@/lib/types";
 import FeaturedCard from "./FeaturedCard";
 
