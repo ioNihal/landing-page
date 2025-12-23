@@ -10,3 +10,17 @@ export type FeaturedTool = {
     price: number;
     rating: number;
 };
+
+export type AITools = {
+    id: number;
+    name: string;
+    url: string;
+    verified: boolean;
+    img: string;
+    bannerImg: string;
+    type: string;
+    tags: string[];
+    description: string;
+    price: number;
+    rating: number;
+}

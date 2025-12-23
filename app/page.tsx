@@ -1,8 +1,12 @@
 import Hero from "@/components/Hero/Hero";
+import LatestTools from "@/components/LatestTools/LatestTools";
 
 
 export default function Home() {
   return (
-    <main><Hero /></main>
+    <main>
+      <Hero />
+      <LatestTools />
+    </main>
   );
 }
