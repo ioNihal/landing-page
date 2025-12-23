@@ -113,7 +113,7 @@ export default function LatestTools() {
     }, [verified]);
 
     return (
-        <section className="px-4 sm:px-6 lg:px-10 py-8 bg-black">
+        <section className="px-4 sm:px-6 lg:px-10 py-8 bg-slate-950">
 
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                 <div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ToolCard({ tool }: { tool: AITools }) {
     return (
         <div className=" relative flex flex-col lg:flex-row gap-4 lg:gap-6
-            rounded-2xl border border-white/15 bg-linear-to-br from-[#0b1220] to-black
+            rounded-2xl border border-white/15 bg-linear-to-br from-[#0d1525] to-slate-950
             p-4 lg:p-5 hover:border-white/25 transition">
 
             {/* bookmark */}
