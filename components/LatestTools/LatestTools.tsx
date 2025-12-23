@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowBigLeft, LucideVerified, MoveRight } from "lucide-react";
+import { LucideVerified, MoveRight } from "lucide-react";
 import { AITools } from "@/lib/types";
 import ToolCard from "./ToolCard";
 
@@ -113,9 +113,9 @@ export default function LatestTools() {
     }, [verified]);
 
     return (
-        <section className="px-10 py-8 bg-black">
+        <section className="px-4 sm:px-6 lg:px-10 py-8 bg-black">
 
-            <div className="flex items-start justify-between mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                 <div>
                     <h2 className="text-2xl font-bold text-white">
                         Latest Tools
@@ -125,14 +125,14 @@ export default function LatestTools() {
                     </p>
                 </div>
 
-                {/* Filters */}
-                <div className="flex items-center gap-3">
+                {/* filters */}
+                <div className="flex flex-wrap items-center gap-3">
                     <select
                         value={period}
                         onChange={(e) => setPeriod(e.target.value)}
-                        className="bg-slate-900 text-slate-200 text-base
-                        px-4 py-3 rounded-md border border-slate-800
-                        outline-none hover:bg-slate-800 transition" >
+                        className="bg-slate-900 text-slate-200 text-sm sm:text-base
+                        px-3 sm:px-4 py-2.5 rounded-md border border-slate-800
+                        outline-none hover:bg-slate-800 transition">
                         <option value="all">All Time</option>
                         <option value="2024-12">December 2024</option>
                         <option value="2025-01">January 2025</option>
@@ -143,39 +143,36 @@ export default function LatestTools() {
                         <option value="2025-06">June 2025</option>
                         <option value="2025-07">July 2025</option>
                         <option value="2025-08">August 2025</option>
-
                     </select>
 
                     <button
-                        onClick={() => setVerified((v) => !v)}
-                        className={`flex items-center gap-3 px-4 py-2 text-base
-                        rounded-md transition ${verified ?
-                                "bg-linear-to-b from-white to-cyan-100 text-blue-600" :
-                                "bg-slate-900 text-slate-300 border border-slate-800"}`}>
+                        onClick={() => setVerified(v => !v)}
+                        className={`flex items-center gap-2 px-4 py-2 text-sm sm:text-base
+                        rounded-md transition ${verified
+                                ? "bg-linear-to-b from-white to-cyan-100 text-blue-600"
+                                : "bg-slate-900 text-slate-300 border border-slate-800"}`}>
                         <span>Verified</span>
-                        <LucideVerified size={20} />
+                        <LucideVerified size={18} />
                     </button>
                 </div>
             </div>
 
-            {/* Tool Cards */}
+            {/* tools */}
             <div className="space-y-5">
-                {filteredTools.map((tool) => (
+                {filteredTools.map(tool => (
                     <ToolCard key={tool.id} tool={tool} />
                 ))}
             </div>
 
-
             <div className="flex justify-center mt-10">
-                <Link
-                    href="/"
-                    className="px-6 py-2 rounded-lg inline-flex items-center justify-between gap-2
+                <Link href="/"
+                    className="px-6 py-2 rounded-lg inline-flex items-center gap-2
                     bg-linear-to-r from-cyan-400 to-blue-600 hover:from-cyan-600 hover:to-blue-600
-                    text-white text-sm font-medium transition"
-                >
+                  text-white text-sm font-medium transition">
                     See All AI Tools <MoveRight />
                 </Link>
             </div>
         </section>
+
     );
 }
