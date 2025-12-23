@@ -1,6 +1,7 @@
 import CTA from "@/components/CTA/CTA";
 import Hero from "@/components/Hero/Hero";
 import LatestTools from "@/components/LatestTools/LatestTools";
+import LogoCloud from "@/components/LogoCloud";
 import TopAITools from "@/components/TopAITools/TopAITools";
 import TrendingTopics from "@/components/TrendingTopics";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <TopAITools />
       <CTA />
       <TrendingTopics />
+      <LogoCloud />
     </main>
   );
 }

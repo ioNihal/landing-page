@@ -5,6 +5,7 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --animate-logo-scroll: logo-scroll 30s linear infinite;
 }
 
 @utility bg-grid {
@@ -28,6 +29,15 @@
 
   to {
     background-position: 0 60px;
+  }
+}
+
+@keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
