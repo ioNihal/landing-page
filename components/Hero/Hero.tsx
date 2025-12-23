@@ -39,7 +39,7 @@ const featuredAITools: FeaturedTool[] = [
 
 export default function Hero() {
     return (
-        <section className="relative isolate bg-slate-950 text-white">
+        <section className="relative isolate bg-slate-950 text-white min-h-screen flex items-center">
             {/* bg grid */}
             <div className="absolute inset-0 -z-10 bg-grid" />
             <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 to-green-400/20" />
@@ -48,14 +48,14 @@ export default function Hero() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
                 {/* badge text */}
                 <div className="flex items-center justify-center gap-2 w-max mx-auto
-                bg-linear-to-r from-cyan-400/50 to-purple-400/50 rounded-full
-                p-4 py-3 backdrop-blur-sm text-sm font-medium shadow-gradient">
+                     bg-linear-to-r from-cyan-400/50 to-purple-400/50 rounded-full
+                     p-4 py-3 backdrop-blur-sm text-sm font-medium shadow-gradient">
                     <Brain className="text-cyan-400" size={22} />
                     <span>Next-Gen AI Discovery Platform</span>
                     <Zap className="text-purple-400" size={22} />
                 </div>
 
-                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl font-bold
+                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl 2xl:text-8xl font-bold
                     bg-linear-to-r from-cyan-400 to-purple-400
                     bg-clip-text text-transparent">
                     AI Tools Tracker
