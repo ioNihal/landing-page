@@ -168,7 +168,7 @@ export default function TopAITools() {
                 </div>
 
                 <div className="overflow-x-auto">
-                    <div className="min-w-full rounded-2xl border border-neutral-800 overflow-hidden">
+                    <div className="min-w-full rounded-2xl lg:border border-neutral-800 overflow-hidden">
                         <div className="hidden lg:grid grid-cols-[160px_1fr_160px_160px_200px] gap-0 bg-neutral-800 p-4 text-slate-300 text-sm">
                             <div className="pl-4">Rank</div>
                             <div>Tool</div>
@@ -177,97 +177,160 @@ export default function TopAITools() {
                             <div></div>
                         </div>
 
-                        <div className="divide-y divide-neutral-800">
+                        <div className="lg:divide-y divide-neutral-800">
                             {TOP_TOOLS.map((tool, idx) => (
                                 <div
                                     key={tool.id}
-                                    className="grid lg:grid-cols-[140px_1fr_160px_160px_160px] grid-cols-1 gap-4 items-center px-4 lg:px-6 py-4"
+                                    className="px-4 py-4 lg:px-6"
                                 >
-                                    <div className="flex items-start lg:items-center">
-                                        <div className="text-lg pl-4 font-semibold text-white lg:w-full">
-                                            {idx + 1}
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-md overflow-hidden bg-slate-900 shrink-0">
-                                            <Image
-                                                src={tool.avatar}
-                                                alt={tool.name}
-                                                width={72}
-                                                height={72}
-                                                className="object-cover w-full h-full"
-                                            />
-                                        </div>
-
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-3 flex-wrap">
-                                                <h3 className="text-base lg:text-lg font-semibold text-white">
-                                                    {tool.name}
-                                                </h3>
-
-                                                <span className="text-xs px-2 py-0.5 rounded-md bg-slate-800 text-slate-300">
-                                                    {tool.type}
+                                    {/* MOBILE CARD */}
+                                    <div className="lg:hidden rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+                                        <div className="flex items-start justify-between">
+                                            <div className="flex items-center gap-3">
+                                                <span className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center text-sm text-white">
+                                                    {idx + 1}
                                                 </span>
+
+                                                <div className="w-10 h-10 rounded-md overflow-hidden bg-slate-900">
+                                                    <Image
+                                                        src={tool.avatar}
+                                                        alt={tool.name}
+                                                        width={48}
+                                                        height={48}
+                                                        className="w-full h-full object-cover"
+                                                    />
+                                                </div>
+
+                                                <div>
+                                                    <h3 className="text-white font-semibold">
+                                                        {tool.name}
+                                                    </h3>
+                                                    <span className="text-xs px-2 py-0.5 rounded-md bg-slate-800 text-slate-300">
+                                                        {tool.type}
+                                                    </span>
+                                                </div>
                                             </div>
 
-                                            <div className="mt-3 lg:mt-2 text-sm text-slate-400 max-w-[60ch] flex items-center gap-5">
+                                            <Link
+                                                href="/"
+                                                className="text-slate-300 hover:text-white"
+                                                aria-label={`Open ${tool.name}`}
+                                            >
+                                                <ExternalLink size={18} />
+                                            </Link>
+                                        </div>
 
-                                                <div className="text-sm text-yellow-400 flex items-center gap-2">
+                                        <div className="mt-4 flex items-center justify-between">
+                                            <div className="flex items-center gap-4 text-sm">
+                                                <div className="flex items-center gap-1 text-yellow-400">
                                                     <Star size={14} fill="currentColor" />
                                                     <span className="text-white font-medium">
                                                         {tool.rating}
                                                     </span>
                                                 </div>
 
-                                                {tool.tags.length > 0 && (
-                                                    <div className="flex gap-2">
-                                                        {tool.tags.map((t) => (
-                                                            <span
-                                                                key={t}
-                                                                className="text-xs px-2 py-1 rounded-md bg-slate-700 text-slate-100"
-                                                            >
-                                                                {t}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-                                                )}
+                                                <div className="flex items-center gap-1 text-slate-300">
+                                                    <Users size={14} />
+                                                    <span>{tool.users}</span>
+                                                </div>
+
+                                                <div className="flex items-center gap-1 text-green-400">
+                                                    <TrendingUp size={14} />
+                                                    <span>{tool.growth}</span>
+                                                </div>
                                             </div>
 
-                                            <div className="text-white font-semibold mt-2">
+                                            <span className="text-white font-semibold">
                                                 ${tool.price}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* DESKTOP ROW */}
+                                    <div className="hidden lg:grid grid-cols-[140px_1fr_160px_160px_160px] gap-4 items-center">
+                                        <div className="flex items-center">
+                                            <div className="text-lg pl-4 font-semibold text-white">
+                                                {idx + 1}
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div className="hidden lg:flex items-center justify-center">
-                                        <div className="inline-flex items-center gap-2 text-slate-200 text-sm">
-                                            <Users size={16} />
-                                            <span className="font-medium">{tool.users}</span>
+                                        <div className="flex gap-4">
+                                            <div className="w-12 h-12 rounded-md overflow-hidden bg-slate-900 shrink-0">
+                                                <Image
+                                                    src={tool.avatar}
+                                                    alt={tool.name}
+                                                    width={72}
+                                                    height={72}
+                                                    className="object-cover w-full h-full"
+                                                />
+                                            </div>
+
+                                            <div className="flex-1">
+                                                <div className="flex items-center gap-3">
+                                                    <h3 className="text-lg font-semibold text-white">
+                                                        {tool.name}
+                                                    </h3>
+                                                    <span className="text-xs px-2 py-0.5 rounded-md bg-slate-800 text-slate-300">
+                                                        {tool.type}
+                                                    </span>
+                                                </div>
+
+                                                <div className="mt-2 flex items-center gap-5 text-sm">
+                                                    <div className="flex items-center gap-1 text-yellow-400">
+                                                        <Star size={14} fill="currentColor" />
+                                                        <span className="text-white font-medium">
+                                                            {tool.rating}
+                                                        </span>
+                                                    </div>
+
+                                                    {tool.tags?.length > 0 && (
+                                                        <div className="flex gap-2">
+                                                            {tool.tags.map(t => (
+                                                                <span
+                                                                    key={t}
+                                                                    className="text-xs px-2 py-1 rounded-md bg-slate-700 text-slate-100"
+                                                                >
+                                                                    {t}
+                                                                </span>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
+
+                                                <div className="mt-2 text-white font-semibold">
+                                                    ${tool.price}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center justify-center">
+                                            <div className="inline-flex items-center gap-2 text-slate-200 text-sm">
+                                                <Users size={16} />
+                                                <span className="font-medium">{tool.users}</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center justify-center">
+                                            <div className="inline-flex items-center gap-2 text-green-400 font-semibold">
+                                                <TrendingUp size={16} />
+                                                <span>{tool.growth}</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center justify-end">
+                                            <Link
+                                                href="/"
+                                                className="text-slate-300 hover:text-white p-2 rounded-md"
+                                                aria-label={`Open ${tool.name}`}
+                                            >
+                                                <ExternalLink size={18} />
+                                            </Link>
                                         </div>
                                     </div>
-
-                                    <div className="hidden lg:flex items-center justify-center">
-                                        <div className="inline-flex items-center gap-2 text-green-400 font-semibold">
-                                            <TrendingUp size={16} />
-                                            <span>{tool.growth}</span>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-start lg:items-center justify-end">
-                                        <Link
-                                            href={'/'}
-                                            className="text-slate-300 hover:text-white inline-flex items-center p-2 rounded-md"
-                                            aria-label={`Open ${tool.name}`}
-                                        >
-                                            <ExternalLink size={18} />
-                                        </Link>
-                                    </div>
-
-                                    
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </div>
 
