@@ -126,7 +126,7 @@ export default function LatestTools() {
                 </div>
 
                 {/* filters */}
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex flex-wrap items-center justify-between lg:justify-start gap-3">
                     <select
                         value={period}
                         onChange={(e) => setPeriod(e.target.value)}
