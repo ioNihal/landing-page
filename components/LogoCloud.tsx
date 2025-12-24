@@ -32,6 +32,7 @@ export default function LogoCloud() {
                                     alt={name}
                                     width={160}
                                     height={80}
+                                    loading="eager"
                                     className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition"
                                 />
                             </div>

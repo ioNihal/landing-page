@@ -18,7 +18,7 @@
 @utility shadow-gradient {
   box-shadow:
     -1px 0 10px rgba(0, 211, 243, 0.6),
-     1px 0 10px rgba(194, 122, 255, 0.6);
+    1px 0 10px rgba(194, 122, 255, 0.6);
 }
 
 
@@ -33,12 +33,18 @@
 }
 
 @keyframes logo-scroll {
-  from {
-    transform: translateX(0);
-  }
   to {
     transform: translateX(-50%);
   }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 

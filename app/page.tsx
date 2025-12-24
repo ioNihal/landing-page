@@ -1,3 +1,4 @@
+import AgenticAITools from "@/components/AgenticAITools/AgenticAITools";
 import CTA from "@/components/CTA/CTA";
 import Hero from "@/components/Hero/Hero";
 import LatestTools from "@/components/LatestTools/LatestTools";
@@ -15,6 +16,7 @@ export default function Home() {
       <CTA />
       <TrendingTopics />
       <LogoCloud />
+      <AgenticAITools />
     </main>
   );
 }
