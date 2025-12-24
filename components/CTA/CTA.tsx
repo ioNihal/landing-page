@@ -16,7 +16,7 @@ export default function CTA() {
                         bg-linear-to-r from-cyan-400 to-purple-400"
                     />
 
-                    {/* Text */}
+                 
                     <p className="relative inline-flex flex-wrap items-center justify-center gap-2
                         text-base sm:text-xl font-medium text-center bg-linear-to-r from-cyan-400 to-purple-400
                         bg-clip-text text-transparent " >
@@ -48,7 +48,7 @@ export default function CTA() {
                     Your competitive advantage starts here.
                 </p>
 
-                <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+                <div className="mt-8 flex flex-col items-center sm:flex-row  justify-center gap-4">
                     <Link
                         href="/"
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-md
