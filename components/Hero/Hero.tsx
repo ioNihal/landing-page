@@ -69,7 +69,7 @@ export default function Hero() {
                 <Searchbox />
 
 
-                <ul className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+                <ul className="mt-8 flex flex-wrap justify-center gap-6 sm:gap-3 text-sm">
                     {["AI Companions", "Productivity AI", "Creative AI", "Agentic AI", "+ More"].map(item => (
                         <li key={item}>
                             <Link
