@@ -21,7 +21,7 @@ export default function AgenticAITools() {
                     Agentic AI in Action
                 </h2>
 
-                <p className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto">
+                <p className="text-slate-300 text-base sm:text-lg max-w-4xl mx-auto">
                     Explore the rise of autonomous AI agents capable of executing complex tasks with minimal human intervention.
                 </p>
             </div>
