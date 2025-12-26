@@ -1,16 +1,16 @@
 import Image from "next/image";
 
 const tools = [
-    { name: "Manus AI", logo: "/agenticAI/manusai.png", desc: "Manus is a next-generation AI agent that..." },
-    { name: "AiAgent.app", logo: "/agenticAI/aiagent.png", desc: "AI agent is a web app that allows users..." },
-    { name: "AgentGPT", logo: "/agenticAI/agentgpt.png", desc: "AgentGPT is a tool that enables users to..." },
-    { name: "Cheat Layer Agents", logo: "/agenticAI/cheatlayeragents.png", desc: "Cheat Layers is an AI tool that users..." },
-    { name: "TaskingAI", logo: "/agenticAI/taskingai.png", desc: "TaskingAI is an innovative AI app..." },
-    { name: "Agency Swarm", logo: "/agenticAI/agencyswarm.png", desc: "Agency Swarm is an AI-powered framework..." },
-    { name: "Teammately", logo: "/agenticAI/teammately.png", desc: "Teammately is an autonomous AI agent..." },
-    { name: "Botonomous", logo: "/agenticAI/botonomousai.png", desc: "Botonomous is an AI-powered platform..." },
-    { name: "Agentic", logo: "/agenticAI/agentic.png", desc: "Agentic Mission Control Blog is an AI..." },
-    { name: "AgentHub", logo: "/agenticAI/agenthub.png", desc: "Gumloop is an AI automation framework..." },
+    { name: "Manus AI", logo: "/agenticAI/manusai.webp", desc: "Manus is a next-generation AI agent that..." },
+    { name: "AiAgent.app", logo: "/agenticAI/aiagent.webp", desc: "AI agent is a web app that allows users..." },
+    { name: "AgentGPT", logo: "/agenticAI/agentgpt.webp", desc: "AgentGPT is a tool that enables users to..." },
+    { name: "Cheat Layer Agents", logo: "/agenticAI/cheatlayeragents.webp", desc: "Cheat Layers is an AI tool that users..." },
+    { name: "TaskingAI", logo: "/agenticAI/taskingai.webp", desc: "TaskingAI is an innovative AI app..." },
+    { name: "Agency Swarm", logo: "/agenticAI/agencyswarm.webp", desc: "Agency Swarm is an AI-powered framework..." },
+    { name: "Teammately", logo: "/agenticAI/teammately.webp", desc: "Teammately is an autonomous AI agent..." },
+    { name: "Botonomous", logo: "/agenticAI/botonomousai.webp", desc: "Botonomous is an AI-powered platform..." },
+    { name: "Agentic", logo: "/agenticAI/agentic.webp", desc: "Agentic Mission Control Blog is an AI..." },
+    { name: "AgentHub", logo: "/agenticAI/agenthub.webp", desc: "Gumloop is an AI automation framework..." },
 ];
 
 export default function AgenticAITools() {

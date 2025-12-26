@@ -8,7 +8,7 @@ const featuredAITools: FeaturedTool[] = [
     {
         name: "ChatGPT",
         url: "/",
-        img: "/featured/placeholder.png",
+        img: "/featured/placeholder.webp",
         type: "Chatbots",
         tags: ["Free", "API", "Popular"],
         description: "Advanced conversational AI for text generation, analysis, and creative tasks.",
@@ -18,7 +18,7 @@ const featuredAITools: FeaturedTool[] = [
     {
         name: "MidJourney",
         url: "/",
-        img: "/featured/placeholder.png",
+        img: "/featured/placeholder.webp",
         type: "Image Generation",
         tags: ["Premium", "Discord", "Art"],
         description: "AI-powered image generation tool for creating stunning visuals from text prompts.",
@@ -28,7 +28,7 @@ const featuredAITools: FeaturedTool[] = [
     {
         name: "Github Copilot",
         url: "/",
-        img: "/featured/placeholder.png",
+        img: "/featured/placeholder.webp",
         type: "Developer Tools",
         tags: ["Paid", "IDE", "Coding"],
         description: "AI coding assistant that helps developers write code faster and with fewer errors.",

@@ -13,7 +13,7 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-3 mb-6">
                             <Image
-                                src="/header-logo.png"
+                                src="/header-logo.webp"
                                 alt="AI Tool Tracker"
                                 width={160}
                                 height={100}
