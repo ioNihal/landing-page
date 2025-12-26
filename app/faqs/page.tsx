@@ -97,13 +97,21 @@ const FAQS: Record<string, { q: string; a: string }[]> = {
     ],
 };
 
+const SUPPORT_ITEMS = [
+    { icon: Clock3, label: "Response within 24 hours" },
+    { icon: Shield, label: "Expert AI tool specialists" },
+    { icon: Award, label: "Comprehensive knowledge base" },
+];
+
+
 export default function FAQSPage() {
 
 
     return (
-        <main className="relative isolate bg-slate-950 text-white ">
+        <main className="relative isolate  text-white ">
 
-            <div className="absolute top-3 left-3 lg:top-10 lg:left-10 inline-flex items-center text-xs lg:text-base">
+            <div className="mb-4 ml-3 mt-3 lg:mt-0 lg:ml-0 lg:absolute lg:top-10 lg:left-10 inline-flex items-center text-xs lg:text-base">
+
                 <Link href={"/"}>Home</Link>&nbsp;<ChevronRight size={16} />&nbsp;FAQ&apos;s
             </div>
             {/* bg grid */}
@@ -111,7 +119,7 @@ export default function FAQSPage() {
             <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 to-green-400/20" />
 
 
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-26 2xl:py-36 text-center">
                 {/* badge text */}
                 <div className="flex items-center justify-center gap-2 w-max mx-auto
                      bg-linear-to-r from-cyan-400/50 to-purple-400/50 rounded-full
@@ -147,12 +155,12 @@ export default function FAQSPage() {
                     <AccordionSection tabs={TABS} faqs={FAQS} />
 
                     {/* Support Card */}
-                    <section className="mt-16 rounded-2xl bg-linear-to-br from-slate-700 to-indigo-950 p-8 text-center">
+                    <section aria-labelledby="support-heading" className="mt-16 rounded-2xl bg-linear-to-br from-slate-700 to-indigo-950 p-8 text-center">
                         <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-white/30">
                             <MessageCircle />
                         </div>
 
-                        <h3 className="mt-4 text-3xl font-semibold">
+                        <h3 id="support-heading" className="mt-4 text-3xl font-semibold">
                             Still have questions?
                         </h3>
 
@@ -162,10 +170,13 @@ export default function FAQSPage() {
                         </p>
 
 
-                        <ul className="mt-6  space-y-2 text-sm text-slate-300 text-left max-w-sm mx-auto">
-                            <li className="flex items-center gap-2"><Clock3 /> Response within 24 hours</li>
-                            <li className="flex items-center gap-2"><Shield /> Expert AI tool specialists</li>
-                            <li className="flex items-center gap-2"><Award /> Comprehensive knowledge base</li>
+                        <ul className="mt-6 space-y-2 text-sm text-slate-300 text-left max-w-sm mx-auto">
+                            {SUPPORT_ITEMS.map(({ icon: Icon, label }) => (
+                                <li key={label} className="flex items-center gap-2">
+                                    <Icon />
+                                    {label}
+                                </li>
+                            ))}
                         </ul>
 
                         <Link href={"/"} className="block w-full max-w-sm mx-auto mt-8 px-12 py-2 rounded-md

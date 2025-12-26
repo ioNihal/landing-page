@@ -15,6 +15,8 @@ export default function AccordionSection({ tabs, faqs }: { tabs: string[], faqs:
                 {tabs.map(tab => (
                     <button
                         key={tab}
+                        role="tab"
+                        aria-selected={activeTab === tab}
                         onClick={() => {
                             setActiveTab(tab);
                             setOpenIndex(null);
@@ -33,10 +35,14 @@ export default function AccordionSection({ tabs, faqs }: { tabs: string[], faqs:
             <section className="mt-10 space-y-4">
                 {faqs[activeTab]?.map((item, idx) => {
                     const isOpen = openIndex === idx;
+                    const panelId = `${activeTab}-${idx}`;
+
 
                     return (
-                        <div key={idx} className="rounded-xl border border-white/15 bg-slate-900/40">
+                        <div key={item.q} className="rounded-xl border border-white/15 bg-slate-900/40">
                             <button
+                                aria-expanded={isOpen}
+                                aria-controls={panelId}
                                 onClick={() => setOpenIndex(isOpen ? null : idx)}
                                 className="w-full flex items-center justify-between px-6 py-4 text-left">
                                 <span className="font-medium">
