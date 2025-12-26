@@ -102,6 +102,10 @@ export default function FAQSPage() {
 
     return (
         <main className="relative isolate bg-slate-950 text-white ">
+
+            <div className="absolute top-10 left-10">
+                Home&nbsp;&gt;&nbsp;FAQ&apos;s
+            </div>
             {/* bg grid */}
             <div className="absolute inset-0 -z-10 bg-grid" />
             <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 to-green-400/20" />
