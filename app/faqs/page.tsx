@@ -1,7 +1,7 @@
 
 
 import AccordionSection from "@/components/FAQSPage/AccordionSection";
-import { Award, Clock3, Info, MessageCircle, Shield } from "lucide-react";
+import { Award, ChevronRight, Clock3, Info, MessageCircle, Shield } from "lucide-react";
 import Link from "next/link";
 
 const TABS = ["General", "AI Tools", "Pricing & Deals", "Account"];
@@ -103,8 +103,8 @@ export default function FAQSPage() {
     return (
         <main className="relative isolate bg-slate-950 text-white ">
 
-            <div className="absolute top-10 left-10">
-                Home&nbsp;&gt;&nbsp;FAQ&apos;s
+            <div className="absolute top-10 left-10 inline-flex items-center">
+                <Link href={"/"}>Home</Link>&nbsp;<ChevronRight size={16} />&nbsp;FAQ&apos;s
             </div>
             {/* bg grid */}
             <div className="absolute inset-0 -z-10 bg-grid" />
