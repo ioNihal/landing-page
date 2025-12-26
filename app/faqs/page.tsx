@@ -103,7 +103,7 @@ export default function FAQSPage() {
     return (
         <main className="relative isolate bg-slate-950 text-white ">
 
-            <div className="absolute top-10 left-10 inline-flex items-center">
+            <div className="absolute top-3 left-3 lg:top-10 lg:left-10 inline-flex items-center text-xs lg:text-base">
                 <Link href={"/"}>Home</Link>&nbsp;<ChevronRight size={16} />&nbsp;FAQ&apos;s
             </div>
             {/* bg grid */}
