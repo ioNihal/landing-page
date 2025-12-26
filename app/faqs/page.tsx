@@ -121,7 +121,7 @@ export default function FAQSPage() {
 
                 </div>
 
-                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl 2xl:text-8xl font-semibold lg:leading-18">
+                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl 2xl:text-8xl font-semibold ">
                     How can we<br />
                     <span className=" bg-linear-to-r from-cyan-400 to-purple-400
                     bg-clip-text text-transparent">help you?</span>
