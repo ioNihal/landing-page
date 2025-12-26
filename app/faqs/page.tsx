@@ -119,7 +119,7 @@ export default function FAQSPage() {
             <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 to-green-400/20" />
 
 
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-26 2xl:py-36 text-center">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-26 2xl:py-36 text-center">
                 {/* badge text */}
                 <div className="flex items-center justify-center gap-2 w-max mx-auto
                      bg-linear-to-r from-cyan-400/50 to-purple-400/50 rounded-full
