@@ -110,7 +110,7 @@ export default function FAQSPage() {
     return (
         <main className="relative isolate  text-white ">
 
-            <div className="mb-4 ml-3 mt-3 lg:mt-0 lg:ml-0 lg:absolute lg:top-10 lg:left-10 inline-flex items-center text-xs lg:text-base">
+            <div className="absolute top-10 left-10 hidden lg:inline-flex items-center text-xs ">
 
                 <Link href={"/"}>Home</Link>&nbsp;<ChevronRight size={16} />&nbsp;FAQ&apos;s
             </div>
