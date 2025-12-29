@@ -64,7 +64,7 @@ export default function Header() {
                             <LogIn size={20} />
                         </Link>
 
-                        <Link href="/"
+                        <Link href="/submit-tool"
                             className="hidden sm:inline-flex items-center gap-2 rounded-md
                             bg-linear-to-r from-cyan-400 to-blue-600
                             px-4 py-2 text-sm font-medium"
