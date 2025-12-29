@@ -153,9 +153,9 @@ export default function SubmitAIToolPage() {
             </section>
 
 
-            <div className="bg-slate-950">
+            <div className="bg-slate-950 px-4">
                 {/* Pricing Plans */}
-                <section className="flex gap-20 px-4 sm:px-6 lg:px-20 pt-16 pb-24">
+                <section className="flex flex-col lg:flex-row gap-20 px-4 sm:px-6 lg:px-20 pt-16 pb-24">
                     <div>
                         <h2 className="text-3xl">
                             Choose Your <br />
