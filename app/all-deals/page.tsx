@@ -87,14 +87,17 @@ export default function AllDealsPage() {
 
             {/* Hero */}
             <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-20 text-center">
-                <div className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-cyan-400/50 to-purple-400/50 px-4 py-2 text-sm font-medium backdrop-blur">
+                <div className="inline-flex items-center gap-2 rounded-full 
+                     bg-linear-to-r from-cyan-400/50 to-purple-400/50
+                     px-4 py-2 text-sm font-medium backdrop-blur">
                     <Percent size={14} className="text-cyan-400" />
                     Best Deals & Discount Platform
                 </div>
 
                 <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl font-semibold">
                     Find the
-                    <span className="block bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    <span className="block bg-linear-to-r from-cyan-400 to-purple-400 
+                    bg-clip-text text-transparent">
                         Best AI Deals
                     </span>
                     for your needs
@@ -118,8 +121,8 @@ export default function AllDealsPage() {
                                     </g>
                                     <defs>
                                         <linearGradient id="paint0_linear_407_4180" x1="16.9998" y1="1.86951" x2="16.9998" y2="43.1306" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#FF863A" />
-                                            <stop offset="1" stop-color="#FF5550" />
+                                            <stop stopColor="#FF863A" />
+                                            <stop offset="1" stopColor="#FF5550" />
                                         </linearGradient>
                                         <clipPath id="clip0_407_4180">
                                             <rect width="34" height="45" fill="white" />
@@ -142,10 +145,7 @@ export default function AllDealsPage() {
                     {/* flash deals cards */}
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {FLASH_DEALS.map((deal) => (
-                            <div
-                                key={deal.name}
-                                className="rounded-xl border border-white/15 bg-slate-900/60 p-5 relative"
-                            >
+                            <div key={deal.name} className="rounded-xl border border-white/15 bg-slate-900/60 p-5 relative">
                                 <div className="flex items-start justify-between">
                                     <div>
                                         <h3 className="font-semibold">{deal.name}</h3>
@@ -181,9 +181,9 @@ export default function AllDealsPage() {
                                         style={{ width: `${deal.percentage}%` }} />
                                 </div>
 
-                                <button className="mt-4 w-full rounded-md bg-linear-to-r
-                                from-orange-500 to-red-500 flex items-center justify-center gap-1 cursor-pointer
-                                 py-2 font-medium hover:from-orange-600 hover:to-red-600 transition-colors duration-300 ease-in-out">
+                                <button className="mt-4 w-full rounded-md bg-linear-to-r from-orange-500 to-red-500
+                                        flex items-center justify-center gap-1 cursor-pointer py-2 font-medium 
+                                        hover:from-orange-600 hover:to-red-600 transition-colors duration-300 ease-in-out">
                                     <Timer size={16} /><span>Claim Deal</span>
                                 </button>
                             </div>
@@ -202,11 +202,8 @@ export default function AllDealsPage() {
 
                     <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {[...DEALS, ...DEALS, ...DEALS].map((deal, idx) => (
-                            <div
-                                key={idx}
-                                className="rounded-xl border border-white/15 hover:border-white/40 bg-slate-950 
-                                p-5 transition-all duration-300 relative"
-                            >
+                            <div key={idx} className="rounded-xl border border-white/15 hover:border-white/40
+                                         bg-slate-950 p-5 transition-all duration-300 relative">
                                 <span className="absolute top-3 right-3 text-xs bg-cyan-400/20 text-cyan-300 px-2 py-0.5 rounded">
                                     {deal.discount}
                                 </span>
@@ -240,20 +237,14 @@ export default function AllDealsPage() {
                                 </div>
 
                                 <div className="mt-4 text-2xl font-semibold flex items-center gap-2">
-
                                     ${deal.price}
                                     <span className="text-sm line-through text-slate-400">
                                         ${deal.original}
                                     </span>
                                     <span className="text-xs text-cyan-400">Save ${deal.original - deal.price}</span>
-
                                 </div>
-                                <Link
-                                    href="/"
-                                    className="block mt-4 text-center rounded-md 
-                                    bg-linear-to-r from-cyan-400 to-blue-600
-                                     px-4 py-1.5 text-sm font-medium hover:from-cyan-500 hover:to-blue-700 transition"
-                                >
+                                <Link href="/" className="block mt-4 text-center rounded-md bg-linear-to-r from-cyan-400 to-blue-600
+                                     px-4 py-1.5 text-sm font-medium hover:from-cyan-500 hover:to-blue-700 transition">
                                     Get Deal
                                 </Link>
                             </div>
