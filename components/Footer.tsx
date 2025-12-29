@@ -13,7 +13,7 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-3 mb-6">
                             <Image
-                                src="/header-logo.webp"
+                                src="/header-logo.png"
                                 alt="AI Tool Tracker"
                                 width={160}
                                 height={100}
@@ -62,7 +62,7 @@ export default function Footer() {
                             <li><Link href="#" className="hover:text-white transition">About Us</Link></li>
                             <li><Link href="#" className="hover:text-white transition">Blog</Link></li>
                             <li><Link href="#" className="hover:text-white transition">Careers</Link></li>
-                            <li><Link href="#" className="hover:text-white transition">Contact</Link></li>
+                            <li><Link href="/contact-us" className="hover:text-white transition">Contact</Link></li>
                         </ul>
                     </div>
 
