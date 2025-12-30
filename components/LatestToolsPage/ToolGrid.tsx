@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import ToolCard from "./ToolCard";
+import ToolCard from "../Shared/ToolCard";
 
 type Tool = {
     id: number;
@@ -18,7 +18,7 @@ export default function ToolGrid({ tools }: { tools: Tool[] }) {
         <>
             <div className="grid gap-5 sm:grid-cols-2 2xl:grid-cols-3">
                 {tools.map((tool) => (
-                    <ToolCard tool={tool} key={tool.id} />
+                    <ToolCard tool={tool}  iconType="save" key={tool.id} />
                 ))}
             </div>
 

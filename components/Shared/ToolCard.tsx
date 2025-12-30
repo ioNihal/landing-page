@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Bookmark, Star, ExternalLink } from "lucide-react";
+import { Bookmark, Star, ExternalLink, Trash2 } from "lucide-react";
 
 type Tool = {
     id: number;
@@ -14,11 +14,13 @@ type Tool = {
     url: string;
 }
 
-export default function ToolCard({ tool }: { tool: Tool }) {
+export default function ToolCard({ tool, iconType = "save" }: { tool: Tool, iconType: "save" | "delete" }) {
     return (
         <div className="relative rounded-xl border border-white/10 bg-slate-900/40 p-4">
-            <button className="absolute top-3 right-3 text-slate-400 hover:text-white">
-                <Bookmark size={24} />
+            <button className="absolute top-3 right-3 transition ">
+                {iconType === "save" ? (
+                    <Bookmark size={24} className="text-slate-400 hover:text-white" />
+                ) : <Trash2 className="text-red-600 hover:text-red-800" size={24} />}
             </button>
 
             <div className="flex gap-3">

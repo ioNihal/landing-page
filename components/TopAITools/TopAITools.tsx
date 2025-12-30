@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Users, TrendingUp, Star } from "lucide-react";
+import DropDownSelect from "../ui/DropDownSelect";
 
 type ToolRow = {
     id: number;
@@ -138,6 +139,17 @@ const TOP_TOOLS: ToolRow[] = [
     },
 ];
 
+
+const CATEGORY_OPTIONS = [
+    { title: "Select Category", value: "default" },
+    { title: "AI Companions", value: "ai-companions" },
+    { title: "Productivity AI", value: "productivity-ai" },
+    { title: "Creative AI", value: "creative-ai" },
+    { title: "Other AI", value: "other-ai" },
+    { title: "GPT", value: "gpt" },
+];
+
+
 export default function TopAITools() {
     return (
         <section className="px-4 sm:px-6 lg:px-10 py-12 bg-slate-950">
@@ -152,19 +164,7 @@ export default function TopAITools() {
                 </div>
 
                 <div className="flex items-center justify-between mb-4">
-                    <div>
-                        <select
-                            className="bg-slate-900 text-slate-200 text-sm sm:text-base
-                            px-3 sm:px-4 py-2.5 rounded-md border border-slate-800
-                            outline-none hover:bg-slate-800 transition">
-                            <option value="default">Select Category</option>
-                            <option value="ai-companions">AI Companions</option>
-                            <option value="productivity-ai">Productivity AI</option>
-                            <option value="creative-ai">Creative AI</option>
-                            <option value="other-ai">Other AI</option>
-                            <option value="gpt">GPT</option>
-                        </select>
-                    </div>
+                    <DropDownSelect options={CATEGORY_OPTIONS} />
                 </div>
 
                 <div className="overflow-x-auto">
