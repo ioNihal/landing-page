@@ -183,14 +183,14 @@ export default function LatestToolsPage() {
             </div>
 
 
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
-                <div className="flex items-start gap-4">
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-24 pb-8">
+                <div className="flex flex-col lg:flex-row items-start gap-4">
                     <div className="w-10 h-10 rounded-md bg-neutral-700 flex items-center justify-center">
                         <MessageSquare />
                     </div>
                     <div>
-                        <h1 className="text-3xl font-semibold">Chatbots</h1>
-                        <p className="mt-1 max-w-2xl text-slate-300">
+                        <h1 className="text-xl lg:text-3xl font-semibold">Chatbots</h1>
+                        <p className="mt-1 max-w-2xl text-slate-300 text-sm lg:text-base">
                             Explore AI-powered conversational agents that can automate support, enhance customer experiences, and engage users across platforms.
                         </p>
                         <span className="inline-block mt-2 text-xs text-gray-200 bg-neutral-700 p-1 px-2 rounded-sm">
@@ -201,7 +201,7 @@ export default function LatestToolsPage() {
             </section>
 
 
-            <div className="max-w-7xl mx-auto pb-10 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8">
+            <div className="max-w-7xl mx-auto pb-10 px-4 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8">
                 {/* Sidebar */}
                 <ToolsSidebar />
 

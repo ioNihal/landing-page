@@ -8,7 +8,7 @@ export default function ToolsToolbar() {
     const [toggleVerfied, setToggleVerfied] = useState(false)
 
     return (
-        <div className="flex flex-col sm:flex-row gap-3 items-center justify-between mb-6">
+        <div className="flex flex-row gap-3 items-center justify-between mb-6">
             <div className="relative w-full">
                 <Search
                     size={16}
