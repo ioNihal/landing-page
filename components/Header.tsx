@@ -23,13 +23,15 @@ export default function Header() {
         <>
             <header className="sticky top-0 z-50 bg-slate-950 backdrop-blur border-b border-white/10">
                 <div className="px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-white">
-                    <Image
-                        src="/header-logo.png"
-                        alt="AI Tools Tracker"
-                        width={120}
-                        height={40}
-                        priority
-                    />
+                    <Link href={"/"}>
+                        <Image
+                            src="/header-logo.png"
+                            alt="AI Tools Tracker"
+                            width={120}
+                            height={40}
+                            priority
+                        />
+                    </Link>
 
                     <nav className="hidden md:block">
                         <ul className="flex items-center gap-6 text-sm font-medium">
