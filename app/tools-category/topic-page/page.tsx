@@ -92,7 +92,7 @@ export const tools = [
 ];
 
 
-export default function page() {
+export default function TopicPage() {
     return (
         <main className="relative isolate bg-slate-950 text-white">
             {/* bg grid */}

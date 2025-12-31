@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import ShareExperienceCard from "./ShareExperienceCard";
 
 const REVIEWS = [
     { stars: 5, content: "Handles complex prompts like a pro. Perfect for deep reasoning and debugging.", author: "Ravi M", role: "Developer" },
@@ -7,7 +8,7 @@ const REVIEWS = [
 ]
 
 
-export default function ReviewSection() {
+export default function ReviewSection({ writeReview = false }: { writeReview?: boolean }) {
     return (
         <section className="mt-10 rounded-xl border border-white/10 bg-slate-950 p-6">
             <div className="flex items-center justify-between mb-4">
@@ -29,6 +30,11 @@ export default function ReviewSection() {
                     <div><span className="text-white">-&nbsp;{item.author},</span>&nbsp;<span>{item.role}</span></div>
                 </div>
             ))}
+
+            {writeReview && (
+                <ShareExperienceCard />
+            )}
+
         </section>
     )
 }

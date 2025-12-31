@@ -207,7 +207,7 @@ const CATEGORIES = [
     },
 ]
 
-export default function page() {
+export default function ToolCategoryPage() {
     return (
         <main className="relative isolate bg-slate-950 text-white">
             {/* bg grid */}
