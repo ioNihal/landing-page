@@ -27,7 +27,7 @@ export default function FeaturedCard({ tool }: { tool: FeaturedTool }) {
                     className="h-14 w-14 rounded-lg object-cover" />
 
                 <div className="flex-1">
-                    <h3 className="text-lg font-semibold">{tool.name}</h3>
+                    <h2 className="text-lg font-semibold">{tool.name}</h2>
 
                     <span className="mt-1 inline-block rounded-md
                           border border-white/15 px-2 py-0.5 text-xs text-gray-300">
