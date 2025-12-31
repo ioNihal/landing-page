@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { ChevronRight, MessageSquare, Star } from "lucide-react";
+import { ChevronRight, MessageSquare } from "lucide-react";
 import ToolsSidebar from "@/components/LatestToolsPage/ToolsSidebar";
 import ToolsToolbar from "@/components/LatestToolsPage/ToolsToolbar";
 import ToolGrid from "@/components/LatestToolsPage/ToolGrid";
-import Image from "next/image";
+import FAQSection from "@/components/Shared/FAQSection";
+import ReviewSection from "@/components/Shared/ReviewSection";
+import ExploreCategories from "@/components/Shared/ExploreCategories";
 
 const TOOLS = [
     {
@@ -118,58 +120,6 @@ const TOOLS = [
     },
 ]
 
-const FAQS = [
-    {
-        q: "Is Claude 3.5 free to use?",
-        a: "Claude 3.5 offers a free tier with limited usage. For unlimited access and advanced features, you can upgrade to the Standard plan at $20/month."
-    },
-    {
-        q: "How does Claude compare to other AI assistants?",
-        a: "Claude 3.5 excels in reasoning, safety, and maintaining context across long conversations. It's particularly strong in coding, analysis, and creative writing tasks."
-    },
-    {
-        q: "Can I use Claude for commercial projects?",
-        a: "Yes, Claude 3.5 can be used for commercial purposes. Enterprise customers get additional security features and dedicated support."
-    },
-    {
-        q: "What are the usage limits on the free plan?",
-        a: "The free plan includes limited monthly usage. Once you reach the limit, you'll need to wait for the next billing cycle or upgrade to a paid plan."
-    }
-]
-
-const REVIEWS = [
-    { stars: 5, content: "Handles complex prompts like a pro. Perfect for deep reasoning and debugging.", author: "Ravi M", role: "Developer" },
-    { stars: 4, content: "Great for writing and content planning. Feels natural and accurate.", author: "Priya S", role: "Marketer" },
-    { stars: 5, content: "Best conversational AI I've used. Smart, smooth, and human-like.", author: "Arjun D", role: "Tech User" },
-]
-
-const CATEGORIES = [
-    {
-        name: "Virtual Assistants",
-        count: 150,
-        type: "AI Companions",
-        desc: "Conversational AI and virtual assistants for customer support and automation.",
-        img: "/tools/chatgpt.webp",
-        url: "/"
-    },
-    {
-        name: "Developer Tools",
-        count: 150,
-        type: "Other AI",
-        desc: "Code generation, debugging, and development assistance powered by AI.",
-        img: "/tools/chatgpt.webp",
-        url: "/"
-    },
-    {
-        name: "Productivity",
-        count: 150,
-        type: "Productivity AI",
-        desc: "Streamline workflows and boost efficiency with intelligent automation tools.",
-        img: "/tools/chatgpt.webp",
-        url: "/"
-    },
-]
-
 
 export default function LatestToolsPage() {
     return (
@@ -216,84 +166,16 @@ export default function LatestToolsPage() {
                     <ToolGrid tools={TOOLS} />
 
                     {/* FAQ */}
-                    <section className="mt-20 border border-white/20 rounded-lg p-4">
-                        <h3 className="text-lg font-semibold mb-4">
-                            Frequently Asked Questions
-                        </h3>
-                        <ul className="space-y-3">
-                            {FAQS.map((item, index) => (
-                                <li key={index} className="border border-white/20 p-3 rounded-lg">
-                                    <p className="font-semibold">{item.q}</p>
-                                    <p className="text-slate-300 text-sm">{item.a}</p>
-                                </li>
-                            ))}
-                        </ul>
-
-                    </section>
+                    <FAQSection />
 
                     {/* Reviews */}
-                    <section className="mt-10 rounded-xl border border-white/10 bg-slate-950 p-6">
-                        <div className="flex items-center justify-between mb-4">
-                            <h4 className="font-semibold text-lg">Reviews</h4>
-                            <div className="flex flex-col items-center">
-                                <span className="text-xl">4.8 / 5</span>
-                                <span className="text-xs text-slate-300">Overall Rating</span>
-                            </div>
-                        </div>
-
-                        {REVIEWS.map((item, index) => (
-                            <div key={index} className="mt-6 space-y-2 text-sm text-slate-300">
-                                <div className="flex items-center gap-1">
-                                    {Array.from({ length: item.stars }).map((_, i) => (
-                                        <Star key={i} fill="currentColor" className="text-orange-400" size={16} />
-                                    ))}
-                                </div>
-                                <blockquote className="italic">“{item.content}”</blockquote>
-                                <div><span className="text-white">-&nbsp;{item.author},</span>&nbsp;<span>{item.role}</span></div>
-                            </div>
-                        ))}
-                    </section>
+                    <ReviewSection />
                 </div>
             </div>
-            <section className="p-10 border-t border-white/30">
-                <h3 className="bg-linear-to-r from-blue-500 to-fuchsia-300 bg-clip-text text-transparent font-bold text-xl w-full text-center">Explore AI Tool Categories</h3>
-                <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 max-w-6xl mx-auto">
-                    {CATEGORIES.map((cat, i) => (
-                        <div key={i} className="p-4 rounded-xl border border-slate-800
-                         bg-slate-950 overflow-hidden hover:border-slate-700 transition" >
-                            {/* Image */}
-                            <div className="relative h-40 w-full rounded-lg">
-                                <Image
-                                    src={cat.img}
-                                    alt={`${cat.name}-thumbnail`}
-                                    fill
-                                    className="object-cover rounded-lg"
-                                />
-                            </div>
 
-                            {/* Content */}
-                            <div className="mt-4 space-y-2">
-                                <div className="flex items-center justify-between">
-                                    <h3 className="text-xl font-semibold text-white">
-                                        {cat.name}
-                                    </h3>
-                                    <span className="text-xs px-2 py-0.5 rounded-sm border border-white/20 text-slate-300">
-                                        {cat.count}+ Tools
-                                    </span>
-                                </div>
-
-                                <p className="text-xs uppercase tracking-wide bg-neutral-700 w-max px-2 py-0.5 rounded-sm">
-                                    {cat.type}
-                                </p>
-
-                                <p className="text-sm text-slate-400 leading-relaxed">
-                                    {cat.desc}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
+            {/* explore tools categories */}
+            <section className="bg-slate-950 border-t border-white/30">
+                <ExploreCategories />
             </section>
         </main>
     );

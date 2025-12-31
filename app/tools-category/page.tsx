@@ -248,7 +248,7 @@ export default function page() {
                     {["AI Companions", "Productivity AI", "Creative AI", "Agentic AI", "+ More"].map(item => (
                         <li key={item}>
                             <Link
-                                href="/"
+                                href="/tools-category/topic-page"
                                 className={`rounded-md
                                      ${item === "+ More" ?
                                         "hover:bg-transparent border-0"
@@ -277,7 +277,7 @@ export default function page() {
                             <Image src={cat.img} alt={`${cat.title}-thumbnail`} height={250} width={400}
                                 className=" w-full h-auto object-cover rounded-t-xl" />
                             <div className="py-6 px-8">
-                                <h3 className="text-xl">{cat.title}</h3>
+                                <h3 className="text-xl hover:underline underline-offset-2 transition-all ease-in duration-300"><Link href={"#"}>{cat.title}</Link></h3>
                                 <ul className="mt-4 space-y-2 text-sm">
                                     {cat?.subcategories?.map((subcat, i) => (
                                         <li key={i} className="flex items-center gap-2">
