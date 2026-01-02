@@ -1,4 +1,4 @@
-import { CheckCircle, CircleCheck, EyeOff, Lock, Mail, MoveRight, Rocket, Star, TrendingUp, User, Users } from "lucide-react";
+import { CircleCheck, EyeOff, Lock, Mail, MoveRight, Rocket, Star, TrendingUp, User, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ export default function SignUpPage() {
                         <header className="mb-8 text-center">
                             <div
                                 className="w-max mx-auto bg-emerald-400/30 border border-emerald-400 text-emerald-400
-                            flex items-center gap-2 py-1.5 px-4 rounded-full text-xs"
+                                flex items-center gap-2 py-1.5 px-4 rounded-full text-xs"
                             >
                                 <Rocket size={14} /> Join the Community
                             </div>
@@ -137,7 +137,7 @@ export default function SignUpPage() {
                             {/* OAuth */}
                             <button
                                 className="w-full mx-auto rounded-md bg-black py-2.5 text-sm transition
-                                    border border-white/20 hover:border-white/40 flex items-center justify-center gap-2 cursor-pointer"
+                                border border-white/20 hover:border-white/40 flex items-center justify-center gap-2 cursor-pointer"
                             >
                                 <span>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +152,7 @@ export default function SignUpPage() {
 
                             <button
                                 className="w-full mx-auto rounded-md bg-black py-2.5 text-sm transition
-                                    border border-white/20 hover:border-white/40 flex items-center justify-center gap-2 cursor-pointer"
+                                border border-white/20 hover:border-white/40 flex items-center justify-center gap-2 cursor-pointer"
                             >
                                 <span>
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
