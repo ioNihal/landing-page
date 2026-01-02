@@ -22,7 +22,7 @@ export default function LoginPage() {
             <form
               className="
                 rounded-2xl
-                bg-gradient-to-b from-slate-900/80 to-slate-950/90
+                bg-linear-to-b from-slate-900/80 to-slate-950/90
                 border border-white/10
                 backdrop-blur
                 p-6
