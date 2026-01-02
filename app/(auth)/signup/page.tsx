@@ -6,10 +6,10 @@ import Link from "next/link";
 export default function SignUpPage() {
     return (
         <section className="min-h-screen w-full flex items-stretch">
-            <div className="w-full mx-auto px-6 lg:px-12">
-                <div className="flex items-start justify-center gap-12 py-8">
+            <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12 py-8 lg:py-8 gap-8">
                     {/* FORM */}
-                    <div className="w-[45%]">
+                    <div className="w-full lg:w-[45%]">
                         <header className="mb-8 text-center">
                             <div
                                 className="w-max mx-auto bg-emerald-400/30 border border-emerald-400 text-emerald-400
@@ -114,7 +114,7 @@ export default function SignUpPage() {
                             </div>
 
                             {/* Remember / Forgot */}
-                            <div className="flex items-center justify-between text-sm">
+                            <div className="flex items-center justify-between text-xs md:text-sm">
                                 <label className="flex items-center gap-2 text-slate-400">
                                     <input type="checkbox" />I agree to the
                                     <Link href={"#"} className="bg-linear-to-r from-green-300 to-sky-400 bg-clip-text text-transparent">
@@ -190,7 +190,7 @@ export default function SignUpPage() {
                     </div>
 
                     {/* IMAGE */}
-                    <aside className="w-[40%] h-[90vh] sticky top-5">
+                    <aside className="hidden lg:block w-full lg:w-[55%] h-screen sticky top-5">
                         <div className="relative w-full h-full">
                             <Image src="/signup.png" alt="Security illustration" fill className="object-cover rounded-3xl" priority />
                             <div className="absolute -top-5 -right-5 z-50 bg-amber-200 text-black

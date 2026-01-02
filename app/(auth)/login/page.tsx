@@ -5,10 +5,10 @@ import Link from "next/link";
 export default function LoginPage() {
   return (
     <section className="min-h-screen w-full flex items-stretch">
-      <div className="w-full mx-auto px-6 lg:px-12">
-        <div className="flex items-start justify-center gap-12 py-8">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12 py-28 lg:py-8 gap-8">
           {/* FORM */}
-          <div className="w-[45%]">
+          <div className="w-full lg:w-[45%]">
             <header className="mb-6 text-center">
               <h1 className="text-4xl font-bold bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Log In
@@ -131,7 +131,7 @@ export default function LoginPage() {
           </div>
 
           {/* IMAGE */}
-          <aside className="w-[40%] h-[90vh] sticky top-5">
+          <aside className="hidden lg:block w-full lg:w-[55%] h-screen sticky top-10">
             <div className="relative w-full h-full">
               <Image src="/signup.png" alt="Security illustration" fill className="rounded-3xl object-cover" priority />
               <div className="absolute -top-5 -left-5 z-50 bg-fuchsia-500/60 text-black
