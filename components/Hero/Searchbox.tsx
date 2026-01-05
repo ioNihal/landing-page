@@ -1,7 +1,7 @@
 "use client";
 import { Search } from "lucide-react";
 
-export default function Searchbox() {
+export default function Searchbox({ text = "Search the best AI tools for every need" }: { text?: string }) {
     return (
         <form
             onSubmit={(e) => e.preventDefault()}
@@ -9,7 +9,7 @@ export default function Searchbox() {
             rounded-full bg-slate-950 border border-white/10 p-2">
             <input
                 type="text"
-                placeholder="Search the best AI tools for every need"
+                placeholder={text}
                 className="flex-1 bg-transparent px-4 py-2 text-sm
             placeholder-gray-400 focus:outline-none" />
             <button
