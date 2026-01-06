@@ -56,8 +56,8 @@ export default function Header() {
                                 </div>
                             </li>
 
-                            <li><Link href="/" className="hover:text-cyan-400">AI Tasks</Link></li>
-                            <li><Link href="/" className="hover:text-cyan-400">AI Deals</Link></li>
+                            <li><Link href="/all-tasks" className="hover:text-cyan-400">AI Tasks</Link></li>
+                            <li><Link href="/all-deals" className="hover:text-cyan-400">AI Deals</Link></li>
                         </ul>
                     </nav>
 
