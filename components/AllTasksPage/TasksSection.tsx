@@ -23,7 +23,7 @@ export default function TasksSection() {
     const selectedTasks = categoriesMap[category] ?? allTasks;
 
     return (
-        <section className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8">
+        <section className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-8 mx-auto max-w-7xl">
             {/* SIDEBAR */}
             <aside className="space-y-8">
                 <Categories

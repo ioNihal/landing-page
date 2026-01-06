@@ -76,13 +76,13 @@ export default function AllTasksPage() {
 
             {/* trending now section */}
             <section className="py-10 px-4 sm:px-6 lg:px-10 bg-slate-950 text-left">
-                <div className="flex items-center gap-3 mb-8">
+                <div className="flex items-center gap-3 mb-8 mx-auto max-w-7xl">
                     <TrendingUp className="text-orange-400" size={20} />
                     <h2 className="text-3xl font-semibold">Trending Now</h2>
                 </div>
 
                 {/* Grid */}
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl">
                     {trendingTasks.map((task) => (
                         <article
                             key={task.title}
@@ -125,7 +125,7 @@ export default function AllTasksPage() {
             </div>
 
             <div className="px-4 sm:px-6 lg:px-10 py-10 bg-slate-950">
-                <section aria-labelledby="support-heading" className="rounded-2xl bg-linear-to-br from-slate-700 to-indigo-950 p-8 text-center">
+                <section aria-labelledby="support-heading" className="rounded-2xl bg-linear-to-br from-slate-700 to-indigo-950 p-8 text-center mx-auto max-w-7xl">
                     <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-white/30">
                         <Target />
                     </div>
