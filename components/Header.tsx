@@ -19,6 +19,12 @@ export default function Header() {
     const [open, setOpen] = useState(false);
     const [toolsOpen, setToolsOpen] = useState(false);
 
+    const closeDrawer = () => {
+        setOpen(false);
+        setToolsOpen(false);
+    };
+
+
     return (
         <>
             <header className="sticky top-0 z-50 bg-slate-950 backdrop-blur border-b border-white/10">
@@ -107,7 +113,7 @@ export default function Header() {
                     </div>
 
                     <nav className="mt-10 space-y-6 text-lg">
-                        <Link href="/" className="flex items-center gap-4">
+                        <Link href="/" onClick={closeDrawer} className="flex items-center gap-4">
                             <Home /> Home
                         </Link>
 
@@ -124,15 +130,15 @@ export default function Header() {
 
                             {toolsOpen && (
                                 <div className="mt-4 ml-6 space-y-3 text-base text-slate-300">
-                                    <Link href="/" className="flex items-center gap-3">
+                                    <Link href="/" onClick={closeDrawer} className="flex items-center gap-3">
                                         <span className="h-2 w-2 rounded-full bg-cyan-400" />
                                         Free
                                     </Link>
-                                    <Link href="/" className="flex items-center gap-3">
+                                    <Link href="/" onClick={closeDrawer} className="flex items-center gap-3">
                                         <span className="h-2 w-2 rounded-full bg-cyan-400" />
                                         Freemium
                                     </Link>
-                                    <Link href="/" className="flex items-center gap-3">
+                                    <Link href="/" onClick={closeDrawer} className="flex items-center gap-3">
                                         <span className="h-2 w-2 rounded-full bg-cyan-400" />
                                         Free Trial
                                     </Link>
@@ -140,24 +146,24 @@ export default function Header() {
                             )}
                         </div>
 
-                        <Link href="/all-tasks" className="flex items-center gap-4">
+                        <Link href="/all-tasks" onClick={closeDrawer} className="flex items-center gap-4">
                             <CheckSquare /> AI Tasks
                         </Link>
 
-                        <Link href="/all-deals" className="flex items-center gap-4">
+                        <Link href="/all-deals" onClick={closeDrawer} className="flex items-center gap-4">
                             <Tag /> AI Deals
                         </Link>
                     </nav>
 
                     <div className="mt-auto space-y-4">
-                        <Link href="/submit-tool"
+                        <Link href="/submit-tool" onClick={closeDrawer}
                             className="flex items-center justify-center gap-2 w-full rounded-md
                             bg-linear-to-r from-cyan-400 to-blue-600
                             px-4 py-3 font-medium">
                             Submit AI Tool <MoveRight size={16} />
                         </Link>
 
-                        <Link href="/login"
+                        <Link href="/login" onClick={closeDrawer}
                             className="flex items-center justify-center gap-2 text-slate-300 bg-white/10
                             px-4 py-3 font-medium rounded-md hover:bg-white/20 transition w-full">
                             Login<LogIn size={18} />

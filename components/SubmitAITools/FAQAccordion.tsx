@@ -23,13 +23,11 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
                             ${isOpen
                                 ? "border-white/20 bg-slate-800/70"
                                 : "border-white/10 bg-slate-900/40 hover:bg-slate-900/60"
-                            }`}
-                    >
+                            }`} >
                         <button
                             onClick={() => setOpenIndex(isOpen ? null : idx)}
                             aria-expanded={isOpen}
-                            className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
-                        >
+                            className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left">
                             <span className="text-sm sm:text-base font-medium">
                                 {item.q}
                             </span>
@@ -43,8 +41,7 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
 
                         <div
                             className={`grid transition-[grid-template-rows,opacity] duration-300
-                                ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
-                        >
+                                ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`} >
                             <div className="overflow-hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed">
                                 {item.a}
                             </div>
