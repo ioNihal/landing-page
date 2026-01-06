@@ -48,7 +48,7 @@ export default function Footer() {
                         <h4 className="text-white font-semibold mb-6">Product</h4>
                         <ul className="space-y-4 text-sm">
                             <li><Link href="#" className="hover:text-white transition">Browse Tools</Link></li>
-                            <li><Link href="#" className="hover:text-white transition">Categories</Link></li>
+                            <li><Link href="/tools-category" className="hover:text-white transition">Categories</Link></li>
                             <li><Link href="#" className="hover:text-white transition">Trending</Link></li>
                             <li><Link href="#" className="hover:text-white transition">New Releases</Link></li>
                             <li><Link href="#" className="hover:text-white transition">Compare Tools</Link></li>
@@ -70,7 +70,7 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-semibold mb-6">Resources</h4>
                         <ul className="space-y-4 text-sm">
-                            <li><Link href="#" className="hover:text-white transition">Submit Tool</Link></li>
+                            <li><Link href="/submit-tool" className="hover:text-white transition">Submit Tool</Link></li>
                             <li><Link href="#" className="hover:text-white transition">API Documentation</Link></li>
                             <li><Link href="#" className="hover:text-white transition">Help Centre</Link></li>
                             <li><Link href="#" className="hover:text-white transition">Community</Link></li>

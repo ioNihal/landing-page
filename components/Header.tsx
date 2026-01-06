@@ -140,24 +140,24 @@ export default function Header() {
                             )}
                         </div>
 
-                        <Link href="/" className="flex items-center gap-4">
+                        <Link href="/all-tasks" className="flex items-center gap-4">
                             <CheckSquare /> AI Tasks
                         </Link>
 
-                        <Link href="/" className="flex items-center gap-4">
+                        <Link href="/all-deals" className="flex items-center gap-4">
                             <Tag /> AI Deals
                         </Link>
                     </nav>
 
                     <div className="mt-auto space-y-4">
-                        <Link href="/"
+                        <Link href="/submit-tool"
                             className="flex items-center justify-center gap-2 w-full rounded-md
                             bg-linear-to-r from-cyan-400 to-blue-600
                             px-4 py-3 font-medium">
                             Submit AI Tool <MoveRight size={16} />
                         </Link>
 
-                        <Link href="/"
+                        <Link href="/login"
                             className="flex items-center justify-center gap-2 text-slate-300 bg-white/10
                             px-4 py-3 font-medium rounded-md hover:bg-white/20 transition w-full">
                             Login<LogIn size={18} />

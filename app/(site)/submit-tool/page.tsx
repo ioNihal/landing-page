@@ -216,11 +216,11 @@ export default function SubmitAIToolPage() {
                                 </li>
                             </ul>
 
-                            <button className="mt-auto w-full rounded-md py-2 text-sm font-medium 
-                                    bg-linear-to-r from-emerald-500 to-cyan-500 cursor-pointer
+                            <Link href={'/submit-tool/submit-tool-form'} className="mt-auto w-full rounded-md py-2 text-sm font-medium 
+                                    bg-linear-to-r from-emerald-500 to-cyan-500 cursor-pointer text-center
                                     transition hover:opacity-90">
                                 SUBMIT NOW
-                            </button>
+                            </Link>
                         </div>
 
                         {/* Premium Listing */}
@@ -250,10 +250,10 @@ export default function SubmitAIToolPage() {
                                 </li>
                             </ul>
 
-                            <button className="mt-auto w-full rounded-md bg-linear-to-r from-fuchsia-400 to-purple-600 
-                                    py-2 text-sm font-medium hover:opacity-90 transition">
+                            <Link href={'/submit-tool/submit-tool-form'} className="mt-auto w-full rounded-md bg-linear-to-r from-fuchsia-400 to-purple-600 
+                                    py-2 text-sm font-medium hover:opacity-90 transition text-center">
                                 GET BOOSTED
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </section>
