@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const brands = [
-    { name: "Meta", logo: "/platforms/meta.webp" },
-    { name: "Microsoft", logo: "/platforms/microsoft.webp" },
-    { name: "Stability AI", logo: "/platforms/stabilityai.webp" },
-    { name: "DeepMind", logo: "/platforms/deepmind.webp" },
-    { name: "Google", logo: "/platforms/google.webp" },
-    { name: "OpenAI", logo: "/platforms/openai.webp" },
+    { name: "Meta", logo: "/platforms/meta.png" },
+    { name: "Microsoft", logo: "/platforms/microsoft.png" },
+    { name: "Stability AI", logo: "/platforms/stabilityai.png" },
+    { name: "DeepMind", logo: "/platforms/deepmind.png" },
+    { name: "Google", logo: "/platforms/google.png" },
+    { name: "OpenAI", logo: "/platforms/openai.png" },
 ];
 
 export default function LogoCloud() {
@@ -19,26 +19,25 @@ export default function LogoCloud() {
                     Popular Platforms
                 </h2>
 
-                <div className="relative w-full overflow-hidden mt-20
-                 mask-[linear-gradient(to_right,transparent_0,white_128px,white_calc(100%-128px),transparent_100%)]">
-                    <div className="flex w-max animate-logo-scroll gap-16">
+                <div className="overflow-hidden mt-20 mask-[linear-gradient(to_right,transparent_0,white_128px,white_calc(100%-128px),transparent_100%)]">
+                    <div className="flex w-max animate-logo-scroll">
                         {[...brands, ...brands].map(({ name, logo }, i) => (
-                            <div
-                                key={name + i}
-                                className="flex items-center justify-center min-w-35"
-                            >
+                            <div  key={name + i} className="relative h-14 flex items-center shrink-0 mr-10">
                                 <Image
                                     src={logo}
                                     alt={name}
+                                    height={56}
                                     width={160}
-                                    height={80}
+                                    priority
                                     loading="eager"
-                                    className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition"
+                                    className="object-contain opacity-80 hover:opacity-100 transition"
                                 />
                             </div>
+
                         ))}
                     </div>
                 </div>
+
             </div>
         </section>
     );

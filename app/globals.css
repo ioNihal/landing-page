@@ -5,7 +5,6 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --animate-logo-scroll: logo-scroll 30s linear infinite;
 }
 
 @utility bg-grid {
@@ -33,9 +32,22 @@
 }
 
 @keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+
   to {
     transform: translateX(-50%);
   }
+}
+
+.animate-logo-scroll {
+  animation: logo-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-logo-scroll:hover {
+  animation-play-state: paused;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
