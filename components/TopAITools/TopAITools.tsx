@@ -140,36 +140,23 @@ const TOP_TOOLS: ToolRow[] = [
 ];
 
 
-const CATEGORY_OPTIONS = [
-    { title: "Select Category", value: "default" },
-    { title: "AI Companions", value: "ai-companions" },
-    { title: "Productivity AI", value: "productivity-ai" },
-    { title: "Creative AI", value: "creative-ai" },
-    { title: "Other AI", value: "other-ai" },
-    { title: "GPT", value: "gpt" },
-];
-
-
 export default function TopAITools() {
     return (
         <section className="px-4 sm:px-6 lg:px-10 py-12 bg-slate-950">
-            <div className="mx-auto">
+            <div className="mx-auto max-w-7xl">
                 <div className="text-center mb-8">
                     <h2 className="text-2xl md:text-3xl font-semibold text-white">
                         Top AI Tools
                     </h2>
                     <p className="mt-2 text-sm text-slate-400">
-                        Most popular AI tools based on user engagement and growth.
+                        Discover the most popular AI tools that are transforming industries worldwide.
                     </p>
                 </div>
 
-                <div className="flex items-center justify-between mb-4">
-                    <DropDownSelect options={CATEGORY_OPTIONS} />
-                </div>
 
                 <div className="overflow-x-auto">
-                    <div className="min-w-full rounded-2xl lg:border border-neutral-800 overflow-hidden">
-                        <div className="hidden lg:grid grid-cols-[160px_1fr_160px_160px_200px] gap-0 bg-neutral-800 p-4 text-slate-300 text-sm">
+                    <div className="min-w-full rounded-2xl lg:border border-gray-700 overflow-hidden">
+                        <div className="hidden lg:grid grid-cols-[160px_1fr_160px_160px_200px] gap-0 bg-gray-800/50 p-4 text-slate-300 text-sm">
                             <div className="pl-4">Rank</div>
                             <div>Tool</div>
                             <div className="text-center">Users</div>
@@ -181,34 +168,46 @@ export default function TopAITools() {
                             {TOP_TOOLS.map((tool, idx) => (
                                 <div
                                     key={tool.id}
-                                    className="px-4 py-4 lg:px-6"
+                                    className="px-4 py-4 lg:px-6 bg-gray-800/30"
                                 >
                                     {/* MOBILE CARD */}
-                                    <div className="lg:hidden rounded-2xl border border-white/10 bg-slate-900/60 p-4">
+                                    <div className="lg:hidden rounded-2xl border border-white/10 bg-gray-800/30 p-4">
                                         <div className="flex items-start justify-between">
-                                            <div className="flex items-center gap-3">
+                                            <div className="flex  gap-3 ">
                                                 <span className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center text-sm text-white">
                                                     {idx + 1}
                                                 </span>
 
-                                                <div className="w-10 h-10 rounded-md overflow-hidden bg-slate-900">
-                                                    <Image
-                                                        src={tool.avatar}
-                                                        alt={tool.name}
-                                                        width={48}
-                                                        height={48}
-                                                        className="w-full h-full object-cover"
-                                                    />
+                                                <div className="flex flex-col gap-2">
+                                                    <div className="flex  items-center gap-2">
+                                                        <div className="w-10 h-10 rounded-md overflow-hidden bg-slate-900">
+                                                            <Image
+                                                                src={tool.avatar}
+                                                                alt={tool.name}
+                                                                width={48}
+                                                                height={48}
+                                                                className="w-full h-full object-cover"
+                                                            />
+                                                        </div>
+
+                                                        <h3 className="text-white font-semibold">
+                                                            {tool.name}
+                                                        </h3>
+                                                    </div>
+
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="flex items-center gap-1 text-yellow-400">
+                                                            <Star size={14} fill="currentColor" />
+                                                            <span className="text-white font-medium">
+                                                                {tool.rating}
+                                                            </span>
+                                                        </div>
+                                                        <span className="text-xs px-2 py-1 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">
+                                                            {tool.type}
+                                                        </span>
+                                                    </div>
                                                 </div>
 
-                                                <div>
-                                                    <h3 className="text-white font-semibold">
-                                                        {tool.name}
-                                                    </h3>
-                                                    <span className="text-xs px-2 py-0.5 rounded-md bg-slate-800 text-slate-300">
-                                                        {tool.type}
-                                                    </span>
-                                                </div>
                                             </div>
 
                                             <Link
@@ -220,34 +219,24 @@ export default function TopAITools() {
                                             </Link>
                                         </div>
 
-                                        <div className="mt-4 flex items-center justify-between">
-                                            <div className="flex items-center gap-4 text-sm">
-                                                <div className="flex items-center gap-1 text-yellow-400">
-                                                    <Star size={14} fill="currentColor" />
-                                                    <span className="text-white font-medium">
-                                                        {tool.rating}
-                                                    </span>
-                                                </div>
+                                        <div className="mt-4 flex items-center justify-between text-sm border-t border-white/10 pt-2">
+                                            <div className="flex flex-col gap-1 text-slate-300">
+                                                <span className="text-xs text-gray-400">Users</span>
+                                                <span>{tool.users}</span>
+                                            </div>
 
-                                                <div className="flex items-center gap-1 text-slate-300">
-                                                    <Users size={14} />
-                                                    <span>{tool.users}</span>
-                                                </div>
-
-                                                <div className="flex items-center gap-1 text-green-400">
+                                            <div className="flex flex-col gap-1 text-green-400">
+                                                <span className="text-xs text-gray-400">Users</span>
+                                                <div className="flex items-center gap-2">
                                                     <TrendingUp size={14} />
                                                     <span>{tool.growth}</span>
                                                 </div>
                                             </div>
-
-                                            <span className="text-white font-semibold">
-                                                ${tool.price}
-                                            </span>
                                         </div>
                                     </div>
 
                                     {/* DESKTOP ROW */}
-                                    <div className="hidden lg:grid grid-cols-[140px_1fr_160px_160px_160px] gap-4 items-center">
+                                    <div className="hidden lg:grid grid-cols-[140px_1fr_160px_160px_160px]  gap-4 items-center">
                                         <div className="flex items-center">
                                             <div className="text-lg pl-4 font-semibold text-white">
                                                 {idx + 1}
@@ -255,7 +244,7 @@ export default function TopAITools() {
                                         </div>
 
                                         <div className="flex gap-4">
-                                            <div className="w-12 h-12 rounded-md overflow-hidden bg-slate-900 shrink-0">
+                                            <div className="w-12 h-12 rounded-md overflow-hidden shrink-0">
                                                 <Image
                                                     src={tool.avatar}
                                                     alt={tool.name}
@@ -267,45 +256,29 @@ export default function TopAITools() {
 
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-3">
-                                                    <h3 className="text-lg font-semibold text-white">
+                                                    <h3 className="text-sm sm:text-base font-semibold text-white">
                                                         {tool.name}
                                                     </h3>
-                                                    <span className="text-xs px-2 py-0.5 rounded-md bg-slate-800 text-slate-300">
-                                                        {tool.type}
-                                                    </span>
+
                                                 </div>
 
-                                                <div className="mt-2 flex items-center gap-5 text-sm">
+                                                <div className="flex items-center gap-5 text-xs sm:text-sm">
                                                     <div className="flex items-center gap-1 text-yellow-400">
                                                         <Star size={14} fill="currentColor" />
                                                         <span className="text-white font-medium">
                                                             {tool.rating}
                                                         </span>
+                                                        <span className="text-xs px-2 py-1 ml-2 rounded-full bg-cyan-400/20 
+                                                        border border-cyan-400/20 text-slate-300">
+                                                            {tool.type}
+                                                        </span>
                                                     </div>
-
-                                                    {tool.tags?.length > 0 && (
-                                                        <div className="flex gap-2">
-                                                            {tool.tags.map(t => (
-                                                                <span
-                                                                    key={t}
-                                                                    className="text-xs px-2 py-1 rounded-md bg-slate-700 text-slate-100"
-                                                                >
-                                                                    {t}
-                                                                </span>
-                                                            ))}
-                                                        </div>
-                                                    )}
-                                                </div>
-
-                                                <div className="mt-2 text-white font-semibold">
-                                                    ${tool.price}
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="flex items-center justify-center">
-                                            <div className="inline-flex items-center gap-2 text-slate-200 text-sm">
-                                                <Users size={16} />
+                                            <div className=" text-slate-200 text-sm">
                                                 <span className="font-medium">{tool.users}</span>
                                             </div>
                                         </div>
