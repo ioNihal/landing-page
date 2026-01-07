@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Users, TrendingUp, Star } from "lucide-react";
-import DropDownSelect from "../ui/DropDownSelect";
+import { ExternalLink, TrendingUp, Star } from "lucide-react";
 
 type ToolRow = {
     id: number;
@@ -168,7 +167,7 @@ export default function TopAITools() {
                             {TOP_TOOLS.map((tool, idx) => (
                                 <div
                                     key={tool.id}
-                                    className="px-4 py-4 lg:px-6 bg-gray-800/30"
+                                    className="px-4 py-4 lg:px-6 bg-gray-800/20 hover:bg-gray-800/40 transition"
                                 >
                                     {/* MOBILE CARD */}
                                     <div className="lg:hidden rounded-2xl border border-white/10 bg-gray-800/30 p-4">
