@@ -5,8 +5,8 @@ export default function Searchbox({ text = "Search the best AI tools for every n
     return (
         <form
             onSubmit={(e) => e.preventDefault()}
-            className="mt-6 mx-auto max-w-2xl flex items-center gap-2
-            rounded-full bg-slate-950 border border-white/10 p-2">
+            className="mt-6 mx-auto max-w-4xl flex items-center gap-2
+            rounded-full bg-slate-950 border border-white/10 p-1">
             <input
                 type="text"
                 placeholder={text}

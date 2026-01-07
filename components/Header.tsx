@@ -15,20 +15,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+const AI_TOOLS_SUBMENU = [
+    { title: "Free", slug: "free" },
+    { title: "Freemium", slug: "freemium" },
+    { title: "Free Trial", slug: "free-trial" }
+]
+
 export default function Header() {
     const [open, setOpen] = useState(false);
-    const [toolsOpen, setToolsOpen] = useState(false);
 
     const closeDrawer = () => {
         setOpen(false);
-        setToolsOpen(false);
     };
 
 
     return (
         <>
             <header className="sticky top-0 z-50 bg-slate-950 backdrop-blur border-b border-white/10">
-                <div className="px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between text-white">
+                <div className="px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between text-white">
                     <Link href={"/"}>
                         <Image
                             src="/header-logo.png"
@@ -40,21 +44,21 @@ export default function Header() {
                     </Link>
 
                     <nav className="hidden md:block">
-                        <ul className="flex items-center gap-6 text-sm font-medium">
+                        <ul className="flex items-center gap-6 text-base font-medium">
                             <li className="relative inline-flex items-center gap-1 cursor-pointer hover:text-cyan-400 group">
-                                <span className="inline-flex items-center gap-1">
+                                <Link href={'/ai-tools'} className="inline-flex items-center gap-1">
                                     All AI Tools <ChevronDown size={16} />
-                                </span>
+                                </Link>
 
                                 <div className="absolute left-0 top-full mt-2 w-48 rounded-md bg-slate-800 shadow-lg
                                     opacity-0 invisible translate-y-1
                                     group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
                                     transition-all duration-200 z-50">
                                     <ul className="p-1.5">
-                                        {["Free", "Freemium", "Free Trial"].map(i => (
-                                            <li key={i}>
-                                                <Link href="/" className="block px-4 py-2 text-sm hover:bg-slate-700 rounded-sm">
-                                                    {i}
+                                        {AI_TOOLS_SUBMENU.map(i => (
+                                            <li key={i.slug}>
+                                                <Link href={`/ai-tools?pricing=${i.slug}`} className="block px-4 py-2 text-sm hover:bg-slate-700 rounded-sm">
+                                                    {i.title}
                                                 </Link>
                                             </li>
                                         ))}
@@ -62,13 +66,13 @@ export default function Header() {
                                 </div>
                             </li>
 
-                            <li><Link href="/all-tasks" className="hover:text-cyan-400">AI Tasks</Link></li>
+                            <li><Link href="/collections" className="hover:text-cyan-400">AI Tasks</Link></li>
                             <li><Link href="/all-deals" className="hover:text-cyan-400">AI Deals</Link></li>
                         </ul>
                     </nav>
 
                     <div className="flex items-center gap-3">
-                        <Link href="/" aria-label="Login" className="hidden sm:block">
+                        <Link href="/login" aria-label="Login" className="hidden sm:block">
                             <LogIn size={20} />
                         </Link>
 
@@ -118,35 +122,27 @@ export default function Header() {
                         </Link>
 
                         <div>
-                            <button onClick={() => setToolsOpen(v => !v)}
+                            <Link href={"/all-tools"}
                                 className="flex items-center justify-between w-full">
                                 <span className="flex items-center gap-4">
                                     <Bot /> All AI Tools
                                 </span>
-                                <ChevronDown
-                                    size={18}
-                                    className={`transition ${toolsOpen ? "rotate-180" : ""}`} />
-                            </button>
+                            </Link>
 
-                            {toolsOpen && (
-                                <div className="mt-4 ml-6 space-y-3 text-base text-slate-300">
-                                    <Link href="/" onClick={closeDrawer} className="flex items-center gap-3">
+
+                            <div className="mt-4 ml-6 space-y-3 text-base text-slate-300">
+                                {[AI_TOOLS_SUBMENU.map(i => (
+                                    <Link key={i.slug} href={`/ai-tools?pricing=${i.slug}`}
+                                        onClick={closeDrawer} className="flex items-center gap-3">
                                         <span className="h-2 w-2 rounded-full bg-cyan-400" />
-                                        Free
+                                        {i.title}
                                     </Link>
-                                    <Link href="/" onClick={closeDrawer} className="flex items-center gap-3">
-                                        <span className="h-2 w-2 rounded-full bg-cyan-400" />
-                                        Freemium
-                                    </Link>
-                                    <Link href="/" onClick={closeDrawer} className="flex items-center gap-3">
-                                        <span className="h-2 w-2 rounded-full bg-cyan-400" />
-                                        Free Trial
-                                    </Link>
-                                </div>
-                            )}
+                                ))]}
+                            </div>
+
                         </div>
 
-                        <Link href="/all-tasks" onClick={closeDrawer} className="flex items-center gap-4">
+                        <Link href="/collections" onClick={closeDrawer} className="flex items-center gap-4">
                             <CheckSquare /> AI Tasks
                         </Link>
 

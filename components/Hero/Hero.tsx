@@ -7,7 +7,7 @@ import FeaturedCard from "./FeaturedCard";
 const featuredAITools: FeaturedTool[] = [
     {
         name: "ChatGPT",
-        url: "/",
+        url: "/products/chatgpt",
         img: "/featured/placeholder.webp",
         type: "Chatbots",
         tags: ["Free", "API", "Popular"],
@@ -17,7 +17,7 @@ const featuredAITools: FeaturedTool[] = [
     },
     {
         name: "MidJourney",
-        url: "/",
+        url: "/products/midjourney",
         img: "/featured/placeholder.webp",
         type: "Image Generation",
         tags: ["Premium", "Discord", "Art"],
@@ -27,7 +27,7 @@ const featuredAITools: FeaturedTool[] = [
     },
     {
         name: "Github Copilot",
-        url: "/",
+        url: "/products/github-copilot",
         img: "/featured/placeholder.webp",
         type: "Developer Tools",
         tags: ["Paid", "IDE", "Coding"],
@@ -39,29 +39,29 @@ const featuredAITools: FeaturedTool[] = [
 
 export default function Hero() {
     return (
-        <section className="relative isolate bg-slate-950 text-white min-h-screen flex items-center">
+        <section className="relative isolate bg-slate-950 text-white flex items-center">
             {/* bg grid */}
             <div className="absolute inset-0 -z-10 bg-grid" />
-            <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 to-green-400/20" />
+            <div className="absolute inset-0 -z-10 bg-linear-to-r from-purple-500/10 to-green-400/20" />
 
 
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center space-y-8">
                 {/* badge text */}
                 <div className="flex items-center justify-center gap-2 w-max mx-auto
-                     bg-linear-to-r from-cyan-400/50 to-purple-400/50 rounded-full
-                     p-4 py-3 backdrop-blur-sm text-sm font-medium shadow-gradient">
-                    <Brain className="text-cyan-400" size={22} />
+                     bg-linear-to-r from-cyan-400/20 to-purple-400/20 rounded-full
+                     p-5 py-2 backdrop-blur-sm text-xs border border-cyan-400/30">
+                    <Brain className="text-cyan-400" size={16} />
                     <span>Next-Gen AI Discovery Platform</span>
-                    <Zap className="text-purple-400" size={22} />
+                    <Zap className="text-purple-400" size={16} />
                 </div>
 
-                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl 2xl:text-8xl font-bold
+                <h1 className=" text-4xl sm:text-5xl lg:text-6xl
                     bg-linear-to-r from-cyan-400 to-purple-400
                     bg-clip-text text-transparent">
                     AI Tools Tracker
                 </h1>
 
-                <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+                <p className=" text-gray-300 max-w-2xl mx-auto">
                     Transform your work with 30,000 AI tools across 3,000 AI tasks.
                 </p>
 
@@ -69,7 +69,7 @@ export default function Hero() {
                 <Searchbox />
 
 
-                <ul className="mt-8 flex flex-wrap justify-center gap-6 sm:gap-3 text-sm">
+                <ul className="flex flex-wrap justify-center gap-6 sm:gap-3 text-sm">
                     {["AI Companions", "Productivity AI", "Creative AI", "Agentic AI", "+ More"].map(item => (
                         <li key={item}>
                             <Link
@@ -87,7 +87,7 @@ export default function Hero() {
 
 
                 {/* featured ai tools cards */}
-                <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-left">
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-left max-w-4xl">
                     {featuredAITools.map((tool) => (
                         <FeaturedCard key={tool.name} tool={tool} />
                     ))}

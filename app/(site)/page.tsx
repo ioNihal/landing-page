@@ -10,7 +10,7 @@ import TrendingTopics from "@/components/TrendingTopics/TrendingTopics";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <LatestTools />
       <TopAITools />
@@ -19,6 +19,6 @@ export default function Home() {
       <LogoCloud />
       <AgenticAITools />
       <About />
-    </main>
+    </>
   );
 }
