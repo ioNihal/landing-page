@@ -22,7 +22,7 @@ const AgenticAITools = dynamic(
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero />
       <LatestTools />
       <TopAITools />
@@ -36,6 +36,6 @@ export default function Home() {
         <AgenticAITools />
       </LazySection>
       <About />
-    </>
+    </main>
   );
 }
