@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <footer className="bg-[#0f1623] text-slate-300">
             <div className="2xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 py-20">
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr_1fr_1fr] gap-12">
 
                     {/* logo */}
                     <div>
@@ -21,7 +21,7 @@ export default function Footer() {
 
                         </div>
 
-                        <p className="text-sm leading-relaxed text-slate-400 max-w-sm">
+                        <p className="text-sm leading-relaxed text-slate-400 max-w-md">
                             Your ultimate destination for discovering, comparing, and
                             staying updated with the latest AI tools and technologies.
                             Join thousands of professionals making smarter AI tool decisions.
