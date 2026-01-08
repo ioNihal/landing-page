@@ -1,7 +1,7 @@
 "use client";
 
 import { usePagination } from "@/hooks/usePagination";
-import { Share2 } from "lucide-react";
+import { ExternalLink, Link2, Share2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -125,7 +125,7 @@ export default function ToolsList() {
         setSelected(value);
         setPage(1);
 
-        router.push(`?pricing=${value}&page=1`, { scroll: false });
+        router.push(`?pricing=${value}`, { scroll: false });
     }
 
     const toSlug = (value: string) =>
@@ -233,10 +233,10 @@ export default function ToolsList() {
                                 </Link>
                                 <Link
                                     href={tool.url}
-                                    className="px-4 py-2 rounded-md bg-cyan-500 text-sm text-slate-950
+                                    className="px-4 py-2 rounded-md bg-cyan-500 text-sm 
                                     flex items-center justify-center gap-1 hover:bg-cyan-400 transition"
                                 >
-                                    Visit <Share2 size={14} />
+                                    Visit <ExternalLink size={14} />
                                 </Link>
                             </div>
                         </li>
