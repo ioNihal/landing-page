@@ -5,7 +5,7 @@ export default function CTA() {
     return (
         <section className="relative isolate bg-slate-950 text-white">
             <div className="absolute inset-0 -z-10 bg-grid" />
-            <div className="absolute inset-0 -z-10 bg-linear-to-br from-30% from-green-400/20 to-purple-500/20" />
+            <div className="absolute inset-0 -z-10 bg-linear-to-r from-transparent via-green-400/20 to-transparent" />
 
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 py-20 text-center">
                 <div className="relative inline-flex flex-wrap justify-center items-center gap-3 mb-8 sm:mb-10 px-2">
@@ -16,7 +16,7 @@ export default function CTA() {
                         bg-linear-to-r from-cyan-400 to-purple-400"
                     />
 
-                 
+
                     <p className="relative inline-flex flex-wrap items-center justify-center gap-2
                         text-base sm:text-xl font-medium text-center bg-linear-to-r from-cyan-400 to-purple-400
                         bg-clip-text text-transparent " >
@@ -44,13 +44,14 @@ export default function CTA() {
                     of the curve.
                 </p>
 
-                <p className="mt-3 text-cyan-400 font-medium">
+                <p className="mt-3 bg-linear-to-r from-teal-400 to-cyan-400 
+                bg-clip-text text-transparent font-medium">
                     Your competitive advantage starts here.
                 </p>
 
                 <div className="mt-8 flex flex-col items-center sm:flex-row  justify-center gap-4">
                     <Link
-                        href="/"
+                        href="/collections/all"
                         className="inline-flex items-center gap-2 px-6 py-3 rounded-md
                         bg-linear-to-r from-cyan-400 via-blue-600 to-purple-600
                         hover:from-cyan-500 hover:to-blue-700
@@ -84,7 +85,7 @@ export default function CTA() {
                     </div>
                 </div>
                 <div className="relative mx-auto max-w-6xl px-4 mt-10">
-                    <div className="rounded-xl bg-slate-950/20 px-6 py-4 text-sm text-slate-300 text-center">
+                    <div className="rounded-lg border border-gray-700 bg-slate-800 px-6 py-4 text-sm text-slate-300 text-center">
                         <strong className="text-white">Limited Time:</strong>{" "}
                         Get early access to our upcoming AI tool recommendation
                         engine.&nbsp;

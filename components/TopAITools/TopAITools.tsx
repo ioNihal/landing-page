@@ -268,7 +268,7 @@ export default function TopAITools() {
                                                             {tool.rating}
                                                         </span>
                                                         <span className="text-xs px-2 py-1 ml-2 rounded-full bg-cyan-400/20 
-                                                        border border-cyan-400/20 text-slate-300">
+                                                        border border-cyan-400/20 text-cyan-400">
                                                             {tool.type}
                                                         </span>
                                                     </div>

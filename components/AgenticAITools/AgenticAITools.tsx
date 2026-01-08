@@ -1,16 +1,16 @@
 import Image from "next/image";
 
 const tools = [
-    { name: "Manus AI", logo: "/agenticAI/manusai.webp", desc: "Manus is a next-generation AI agent that..." },
-    { name: "AiAgent.app", logo: "/agenticAI/aiagent.webp", desc: "AI agent is a web app that allows users..." },
-    { name: "AgentGPT", logo: "/agenticAI/agentgpt.webp", desc: "AgentGPT is a tool that enables users to..." },
-    { name: "Cheat Layer Agents", logo: "/agenticAI/cheatlayeragents.webp", desc: "Cheat Layers is an AI tool that users..." },
-    { name: "TaskingAI", logo: "/agenticAI/taskingai.webp", desc: "TaskingAI is an innovative AI app..." },
-    { name: "Agency Swarm", logo: "/agenticAI/agencyswarm.webp", desc: "Agency Swarm is an AI-powered framework..." },
-    { name: "Teammately", logo: "/agenticAI/teammately.webp", desc: "Teammately is an autonomous AI agent..." },
-    { name: "Botonomous", logo: "/agenticAI/botonomousai.webp", desc: "Botonomous is an AI-powered platform..." },
-    { name: "Agentic", logo: "/agenticAI/agentic.webp", desc: "Agentic Mission Control Blog is an AI..." },
-    { name: "AgentHub", logo: "/agenticAI/agenthub.webp", desc: "Gumloop is an AI automation framework..." },
+    { name: "Manus AI", logo: "/agenticAI/manusai.webp", desc: "Manus is a next-generation AI agent that... Manus is a next-generation AI agent that..." },
+    { name: "AiAgent.app", logo: "/agenticAI/aiagent.webp", desc: "AI agent is a web app that allows users... Manus is a next-generation AI agent that..." },
+    { name: "AgentGPT", logo: "/agenticAI/agentgpt.webp", desc: "AgentGPT is a tool that enables users to... Manus is a next-generation AI agent that..." },
+    { name: "Cheat Layer Agents", logo: "/agenticAI/cheatlayeragents.webp", desc: "Cheat Layers is an AI tool that users... Manus is a next-generation AI agent that..." },
+    { name: "TaskingAI", logo: "/agenticAI/taskingai.webp", desc: "TaskingAI is an innovative AI app.. Manus is a next-generation AI agent that... " },
+    { name: "Agency Swarm", logo: "/agenticAI/agencyswarm.webp", desc: "Agency Swarm is an AI-powered framework... Manus is a next-generation AI agent that..." },
+    { name: "Teammately", logo: "/agenticAI/teammately.webp", desc: "Teammately is an autonomous AI agent... Manus is a next-generation AI agent that..." },
+    { name: "Botonomous", logo: "/agenticAI/botonomousai.webp", desc: "Botonomous is an AI-powered platform... Manus is a next-generation AI agent that..." },
+    { name: "Agentic", logo: "/agenticAI/agentic.webp", desc: "Agentic Mission Control Blog is an AI... Manus is a next-generation AI agent that..." },
+    { name: "AgentHub", logo: "/agenticAI/agenthub.webp", desc: "Gumloop is an AI automation framework... Manus is a next-generation AI agent that..." },
 ];
 
 export default function AgenticAITools() {
@@ -27,33 +27,32 @@ export default function AgenticAITools() {
             </div>
 
             {/* Scroll container */}
-            <div className="relative">
-                <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide 
+            <div className="overflow-hidden mt-20  max-w-7xl mx-auto
                 mask-[linear-gradient(to_right,transparent_0,white_128px,white_calc(100%-128px),transparent_100%)]">
-                    {tools.map((tool) => (
-                        <div key={tool.name} className="snap-center min-w-65 sm:min-w-70 lg:min-w-75
-                                bg-white/30 border border-white/15 rounded-xl p-5 text-left
-                                hover:border-white/30 transition shrink-0">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="w-10 h-10 rounded-md bg-white/10 flex items-center justify-center overflow-hidden">
-                                    <Image
-                                        src={tool.logo}
-                                        alt={tool.name}
-                                        width={40}
-                                        height={40}
-                                        className="object-contain"
-                                    />
-                                </div>
-
+                <div className="flex w-max animate-logo-scroll">
+                    {[...tools, ...tools].map((tool, i) => (
+                        <div key={tool.name + i} className=" flex gap-3 shrink-0 mr-10 max-w-xs
+                        bg-gray-700/80 backdrop-blur-sm rounded-2xl p-5 text-left hover:border-white/30">
+                            <div className="w-10 h-10 rounded-md shrink-0">
+                                <Image
+                                    src={tool.logo}
+                                    alt={tool.name}
+                                    width={40}
+                                    height={40}
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div className="flex flex-col gap-1">
                                 <h3 className="text-base font-semibold">
                                     {tool.name}
                                 </h3>
+                                <p className="text-sm text-slate-300 leading-relaxed">
+                                    {tool.desc}
+                                </p>
                             </div>
 
-                            <p className="text-sm text-slate-300 leading-relaxed">
-                                {tool.desc}
-                            </p>
                         </div>
+
                     ))}
                 </div>
             </div>

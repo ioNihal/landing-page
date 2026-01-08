@@ -19,7 +19,8 @@ export default function LogoCloud() {
                     Popular Platforms
                 </h2>
 
-                <div className="overflow-hidden mt-20 mask-[linear-gradient(to_right,transparent_0,white_128px,white_calc(100%-128px),transparent_100%)]">
+                <div className="overflow-hidden mt-20  max-w-7xl mx-auto
+                mask-[linear-gradient(to_right,transparent_0,white_128px,white_calc(100%-128px),transparent_100%)]">
                     <div className="flex w-max animate-logo-scroll">
                         {[...brands, ...brands].map(({ name, logo }, i) => (
                             <div  key={name + i} className="relative h-14 flex items-center shrink-0 mr-10">

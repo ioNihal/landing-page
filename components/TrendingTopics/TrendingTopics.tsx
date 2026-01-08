@@ -45,7 +45,7 @@ export default function TrendingTopics() {
                     {topics.map(({ title, count, tag, icon: Icon }) => (
                         <div key={title} className="rounded-2xl border border-white/20
                                         bg-slate-950 hover:border-white/40 transition p-8 text-center group" >
-                            <div className="mx-auto mb-6 w-14 h-14 rounded bg-neutral-700 flex items-center justify-center">
+                            <div className="mx-auto mb-6 w-14 h-14 rounded bg-gray-700 flex items-center justify-center">
                                 <Icon className="w-7 h-7 text-white/90" />
                             </div>
 
@@ -53,7 +53,7 @@ export default function TrendingTopics() {
                                 {title}
                             </h3>
 
-                            <span className="inline-block mb-3 text-xs px-3 py-1 rounded-md bg-neutral-700 text-white/90">
+                            <span className="inline-block mb-3 text-xs px-3 py-1 rounded-xl bg-gray-700 text-white/90">
                                 {count}
                             </span>
 
