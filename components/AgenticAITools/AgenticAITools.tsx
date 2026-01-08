@@ -32,7 +32,7 @@ export default function AgenticAITools() {
                 <div className="flex w-max animate-logo-scroll">
                     {[...tools, ...tools].map((tool, i) => (
                         <div key={tool.name + i} className=" flex gap-3 shrink-0 mr-10 max-w-xs
-                        bg-gray-700/80 backdrop-blur-sm rounded-2xl p-5 text-left hover:border-white/30">
+                        bg-gray-700/80 hover:bg-gray-700 transition backdrop-blur-sm rounded-2xl p-5 text-left hover:border-white/30">
                             <div className="w-10 h-10 rounded-md shrink-0">
                                 <Image
                                     src={tool.logo}
