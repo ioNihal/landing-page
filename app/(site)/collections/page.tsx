@@ -1,154 +1,114 @@
-import TasksSection from "@/components/AllTasksPage/TasksSection";
+import FeaturedCard from "@/components/Hero/FeaturedCard";
+import { featuredAITools } from "@/components/Hero/Hero";
 import Searchbox from "@/components/Hero/Searchbox";
-import { Brain, ChevronRight, Code, Flame, Image, PenTool, Target, TrendingUp } from "lucide-react";
+import { Brain, Circle, Zap } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
-const trendingTasks = [
+const CATEGORIES = [
     {
-        title: "AI Image Generation",
-        description:
-            "Create stunning artwork, illustrations, and visuals from text descriptions using advanced AI models.",
-        tools: 247,
-        Icon: Image,
-        iconBg: "bg-purple-600/20",
-        iconColor: "text-purple-400",
+        title: "Productivity AI",
+        img: "/categories/aicompanions.png",
+        subcategories: [
+            {
+                title: "Audio & Music",
+                slug: "audio-music"
+            },
+            {
+                title: "Marketing",
+                slug: "marketing"
+            }
+        ]
     },
     {
-        title: "Content Writing",
-        description:
-            "Generate high-quality blogs, articles, and marketing copy with AI-powered writing assistants.",
-        tools: 189,
-        Icon: PenTool,
-        iconBg: "bg-cyan-600/20",
-        iconColor: "text-cyan-400",
+        title: "Creative AI",
+        img: "/categories/productivityai2.png",
+        subcategories: [
+            {
+                title: "Automation",
+                slug: "automation",
+            },
+            {
+                title: "Chatbots",
+                slug: "chatbots"
+            },
+        ]
     },
     {
-        title: "Code Generation",
-        description:
-            "Write, debug, and optimize code faster with AI coding assistants and automated tools.",
-        tools: 156,
-        Icon: Code,
-        iconBg: "bg-green-600/20",
-        iconColor: "text-green-400",
+        title: "AI Companions",
+        img: "/categories/creativeai.png",
+        subcategories: [
+            {
+                title: "Writing & Content",
+                slug: "writing-content",
+            },
+        ]
     },
-];
-
-export default function AllTasksPage() {
+]
+export default function CollectionsPage() {
     return (
-        <main className="relative isolate bg-slate-950 text-white">
-            {/* Breadcrumb */}
-            <div className="absolute top-10 left-10 hidden lg:inline-flex items-center text-xs">
-                <Link href="/">Home</Link>
-                <ChevronRight size={14} />
-                <span>All Tasks</span>
-            </div>
-
-            {/* Background */}
+        <main className="grow relative isolate bg-slate-950 text-white">
+            { /* Background */}
             <div className="absolute inset-0 -z-10 bg-grid" />
-            <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 to-green-400/20" />
+            <div className="absolute inset-0 -z-10 bg-linear-to-r from-purple-500/10 to-green-400/20" />
 
             {/* Hero */}
-            <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-10 text-center">
-                <div className="inline-flex items-center gap-2 rounded-full 
-                     bg-linear-to-r from-cyan-400/50 to-purple-400/50
-                     px-4 py-2 text-sm font-medium backdrop-blur">
-                    <Brain size={14} className="text-cyan-400" />
-                    AI Tasks & Use Cases
+            <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center">
+                {/* badge text */}
+                <div className="flex items-center justify-center gap-2 w-max mx-auto
+                     bg-linear-to-r from-cyan-400/20 to-purple-400/20 rounded-full
+                     p-5 py-2 backdrop-blur-sm text-xs border border-cyan-400/30">
+                    <Brain className="text-cyan-400" size={16} />
+                    <span>Next-Gen AI Discovery Platform</span>
+                    <Zap className="text-purple-400" size={16} />
                 </div>
 
-                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl font-semibold">
-                    Find the perfect AI tool
-                    <span className="block bg-linear-to-r from-cyan-400 to-purple-400 
+                <h1 className="mt-8 text-4xl sm:text-5xl lg:text-6xl 
+                    bg-linear-to-r from-cyan-400 to-purple-400 
                     bg-clip-text text-transparent">
-                        For Any Task
-                    </span>
+                    AI Tool Tracker
                 </h1>
 
                 <p className="mt-4 max-w-2xl mx-auto text-slate-300">
-                    Browse AI tools organized by what you want to accomplish.
-                    From content creation to data analysis, we&apos;ve got the perfect AI solution for your needs.
+                    Transform your work with 30,000 AI Tools doing 3000 AI Tasks
                 </p>
 
                 {/* Searchbox */}
-                <Searchbox text="Search tasks, tools or descriptions..." />
+                <Searchbox text="Search the Best AI Tools for Every Need..." />
+
+                {/* featured ai tools cards */}
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-left max-w-4xl mx-auto mt-10">
+                    {featuredAITools.map((tool) => (
+                        <FeaturedCard key={tool.name} tool={tool} />
+                    ))}
+                </div>
 
             </section>
 
-            {/* trending now section */}
-            <section className="py-10 px-4 sm:px-6 lg:px-10 bg-slate-950 text-left">
-                <div className="flex items-center gap-3 mb-8 mx-auto max-w-7xl">
-                    <TrendingUp className="text-orange-400" size={20} />
-                    <h2 className="text-3xl font-semibold">Trending Now</h2>
-                </div>
-
-                {/* Grid */}
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mx-auto max-w-7xl">
-                    {trendingTasks.map((task) => (
-                        <article
-                            key={task.title}
-                            className="rounded-2xl border border-white/15  bg-white/10
-                            backdrop-blur p-6 flex flex-col justify-between hover:border-white/25 transition">
-
-                            <div className="flex items-center justify-between">
-                                <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${task.iconBg}`}>
-                                    <task.Icon size={18} className={task.iconColor} />
-                                </div>
-
-                                <div className="flex items-center gap-1 text-xs text-orange-400">
-                                    <Flame size={14} />
-                                    Trending
-                                </div>
+            <section className="p-4 lg:p-10 bg-slate-950">
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                    {CATEGORIES.map((cat, i) => (
+                        <div key={i} className="flex flex-col border-2 border-white/20 bg-slate-950 rounded-3xl overflow-clip
+                        hover:border-blue-400/50 transition">
+                            <Image src={cat.img} alt={`${cat.title}-thumbnail`} height={250} width={400}
+                                className=" w-full h-auto object-cover" />
+                            <div className="py-6 px-8">
+                                <h3 className="text-xl hover:underline underline-offset-2 transition-all ease-in duration-300"><Link href={"#"}>{cat.title}</Link></h3>
+                                <ul className="mt-4 space-y-2 text-sm">
+                                    {cat?.subcategories?.map((subcat, i) => (
+                                        <li key={i}>
+                                            <Link href={`/collections/${subcat.slug}`} className="flex items-center gap-2 hover:text-blue-400">
+                                                <Circle fill="currentColor" size={6} />
+                                                {subcat.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-
-                            <div className="mt-6">
-                                <h3 className="text-xl font-semibold">{task.title}</h3>
-                                <p className="mt-3 text-sm text-slate-300 leading-relaxed">
-                                    {task.description}
-                                </p>
-                            </div>
-
-                            <div className="mt-6">
-                                <span className="inline-block rounded-md bg-black/40 border border-white/10
-                                    px-3 py-1 text-xs text-slate-200">
-                                    {task.tools} tools
-                                </span>
-                            </div>
-                        </article>
+                        </div>
                     ))}
                 </div>
             </section>
-
-
-            {/* main section */}
-            <div className="px-4 sm:px-6 lg:px-10 py-10 bg-slate-950 border-t border-white/30">
-                <TasksSection />
-            </div>
-
-            <div className="px-4 sm:px-6 lg:px-10 py-10 bg-slate-950">
-                <section aria-labelledby="support-heading" className="rounded-2xl bg-linear-to-br from-slate-700 to-indigo-950 p-8 text-center mx-auto max-w-7xl">
-                    <div className="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-white/30">
-                        <Target />
-                    </div>
-
-                    <h3 id="support-heading" className="mt-4 text-3xl font-semibold">
-                        Can&apos;t find what you need?
-                    </h3>
-
-                    <p className="mt-2 text-slate-300 mx-auto text-sm max-w-md">
-                        Submit a request and our community will help you discover the perfect AI tool for your specific task.
-                    </p>
-
-
-
-
-                    <Link href={"/"} className="block w-full max-w-sm mx-auto mt-8 px-12 py-2 rounded-md
-                         bg-linear-to-br from-cyan-400 to-blue-600 hover:bg-cyan-400
-                         font-medium transition">
-                        Submit Task Request
-                    </Link>
-                </section>
-            </div>
-
         </main>
     )
 }

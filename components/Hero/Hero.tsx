@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FeaturedTool } from "@/lib/types";
 import FeaturedCard from "./FeaturedCard";
 
-const featuredAITools: FeaturedTool[] = [
+export const featuredAITools: FeaturedTool[] = [
     {
         name: "ChatGPT",
         url: "/products/chatgpt",

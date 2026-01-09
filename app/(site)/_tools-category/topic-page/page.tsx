@@ -10,7 +10,7 @@ import { Check, ChevronRight, FileText, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const SELECT_OPTIONS = [
+export const SELECT_OPTIONS = [
     { title: "Free Tools", value: "free-tools" },
     { title: "Freemium Tools", value: "freemium-tools" },
     { title: "Free Trial Tools", value: "free-trial-tools" },
