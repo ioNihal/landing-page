@@ -1,4 +1,5 @@
 import ToolsList from "@/components/AIToolsPage/ToolsList";
+import { Suspense } from "react";
 
 
 export default function AiToolsPage() {
@@ -16,7 +17,9 @@ export default function AiToolsPage() {
             </div>
 
             <section className="bg-slate-900 py-10">
-                <ToolsList />
+                <Suspense>
+                    <ToolsList />
+                </Suspense>
             </section>
         </main>
     )
