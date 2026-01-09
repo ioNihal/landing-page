@@ -1,7 +1,7 @@
 "use client";
 
 import { usePagination } from "@/hooks/usePagination";
-import { ExternalLink, Link2, Share2 } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
