@@ -11,9 +11,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const SELECT_OPTIONS = [
-    { title: "Free Tools", value: "free-tools" },
-    { title: "Freemium Tools", value: "freemium-tools" },
-    { title: "Free Trial Tools", value: "free-trial-tools" },
+    { title: "Show All", value: "all" },
+    { title: "Free", value: "free" },
+    { title: "Freemium", value: "freemium" },
+    { title: "Free Trial", value: "free-trial" },
 ]
 
 export const tools = [

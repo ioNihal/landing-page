@@ -35,20 +35,20 @@ export default function ExploreCategories() {
             <h3 className="bg-linear-to-r from-blue-500 to-fuchsia-300 bg-clip-text text-transparent font-bold text-xl w-full text-center">Explore AI Tool Categories</h3>
             <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 max-w-6xl mx-auto">
                 {CATEGORIES.map((cat, i) => (
-                    <div key={i} className="p-4 rounded-xl border border-slate-800
+                    <div key={i} className=" rounded-xl border border-slate-800
                          bg-slate-950 overflow-hidden hover:border-slate-700 transition" >
                         {/* Image */}
-                        <div className="relative h-40 w-full rounded-lg">
+                        <div className="relative h-40 w-full rounded-t-lg">
                             <Image
                                 src={cat.img}
                                 alt={`${cat.name}-thumbnail`}
                                 fill
-                                className="object-cover rounded-lg"
+                                className="object-cover rounded-t-lg"
                             />
                         </div>
 
                         {/* Content */}
-                        <div className="mt-4 space-y-2">
+                        <div className="mt-4 space-y-2 p-4">
                             <div className="flex items-center justify-between">
                                 <h3 className="text-xl font-semibold text-white">
                                     {cat.name}

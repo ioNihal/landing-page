@@ -5,7 +5,7 @@ import { Brain, Circle, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const CATEGORIES = [
+export const CATEGORIES = [
     {
         title: "Productivity AI",
         img: "/categories/aicompanions.png",
