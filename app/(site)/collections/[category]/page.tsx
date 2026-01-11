@@ -12,7 +12,12 @@ import { SELECT_OPTIONS, tools } from "../../_tools-category/topic-page/page";
 import Link from "next/link";
 import { CATEGORIES } from "../page";
 
-
+const normalizeString = (str: string) => {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+};
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
@@ -28,6 +33,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const catTitle = matchedCategory?.title ?? null;
   const subcatTitle = matchedSubcategory?.title ?? null;
 
+  if (!matchedCategory || !matchedSubcategory) {
+    return <main className="grow relative text-white flex items-center justify-center">
+      Catgory Not Found
+      </main>
+  }
 
 
   return (
@@ -55,7 +65,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
           <li>
             <Link
-              href={`/collections/${catTitle}`}
+              href={`/collections/${normalizeString(catTitle || "")}`}
               className="hover:text-white transition"
             >
               {catTitle}
