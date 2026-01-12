@@ -9,8 +9,49 @@ import DropDownSelect from "@/components/ui/DropDownSelect";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { CATEGORIES } from "../page";
 import { normalizeString } from "@/lib/utils";
+
+
+export const CATEGORIES = [
+  {
+    title: "Productivity AI",
+    img: "/categories/aicompanions.png",
+    subcategories: [
+      {
+        title: "Audio & Music",
+        slug: "audio-music"
+      },
+      {
+        title: "Marketing",
+        slug: "marketing"
+      }
+    ]
+  },
+  {
+    title: "Creative AI",
+    img: "/categories/productivityai2.png",
+    subcategories: [
+      {
+        title: "Automation",
+        slug: "automation",
+      },
+      {
+        title: "Chatbots",
+        slug: "chatbots"
+      },
+    ]
+  },
+  {
+    title: "AI Companions",
+    img: "/categories/creativeai.png",
+    subcategories: [
+      {
+        title: "Writing & Content",
+        slug: "writing-content",
+      },
+    ]
+  },
+]
 
 export const SELECT_OPTIONS = [
   { title: "Show All", value: "all" },
