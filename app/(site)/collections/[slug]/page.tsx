@@ -8,10 +8,91 @@ import ToolCardTopicPage from "@/components/TopicPage/ToolCardTopicPage";
 import DropDownSelect from "@/components/ui/DropDownSelect";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { SELECT_OPTIONS, tools } from "../../tools-category/topic-page/page";
 import Link from "next/link";
 import { CATEGORIES } from "../page";
 import { normalizeString } from "@/lib/utils";
+
+export const SELECT_OPTIONS = [
+  { title: "Show All", value: "all" },
+  { title: "Free", value: "free" },
+  { title: "Freemium", value: "freemium" },
+  { title: "Free Trial", value: "free-trial" },
+]
+
+export const tools = [
+  {
+    id: 1,
+    name: "Claude 3.5",
+    desc: "ChatGPT is a powerful conversational AI by OpenAI, designed to assist with writing, brainstorming, coding, research, and problem-solving. It delivers human-like responses and adapts to long conversations.",
+    img: "/tools/chatgpt.webp",
+    tags: ["Free", "Popular", "API"],
+    rating: 4.8,
+    url: "https://www.anthropic.com/claude",
+  },
+  {
+    id: 2,
+    name: "Claude 2",
+    desc: "A capable large language model focused on safety and reasoning. Useful for summarization, coding help, and long-form content generation.",
+    img: "/tools/chatgpt.webp",
+    tags: ["Free", "API"],
+    rating: 4.8,
+    url: "https://www.anthropic.com/claude",
+  },
+  {
+    id: 3,
+    name: "Cohere Command",
+    desc: "Enterprise-grade language model optimized for text generation, classification, and embeddings with strong API support.",
+    img: "/tools/chatgpt.webp",
+    tags: ["Free", "Popular", "API"],
+    rating: 4.8,
+    url: "https://cohere.com",
+  },
+  {
+    id: 4,
+    name: "HuggingFace Chat",
+    desc: "Open-source friendly chat interface providing access to multiple community and research-backed language models.",
+    img: "/tools/chatgpt.webp",
+    tags: ["Free", "Open Source"],
+    rating: 4.8,
+    url: "https://huggingface.co/chat",
+  },
+  {
+    id: 5,
+    name: "Bard AI",
+    desc: "Google's conversational AI focused on real-time information, search-backed answers, and productivity use cases.",
+    img: "/tools/chatgpt.webp",
+    tags: ["Free", "Popular"],
+    rating: 4.8,
+    url: "https://gemini.google.com",
+  },
+  {
+    id: 6,
+    name: "GPT-4 Turbo",
+    desc: "A high-performance version of GPT-4 optimized for speed, cost-efficiency, and large context windows via API.",
+    img: "/tools/chatgpt.webp",
+    tags: ["Paid", "API", "Popular"],
+    rating: 4.8,
+    url: "https://openai.com",
+  },
+  {
+    id: 7,
+    name: "Claude 2",
+    desc: "Focused on constitutional AI principles, offering reliable responses for analysis, coding, and structured writing.",
+    img: "/tools/chatgpt.webp",
+    tags: ["Free", "API"],
+    rating: 4.8,
+    url: "https://www.anthropic.com/claude",
+  },
+  {
+    id: 8,
+    name: "Cohere Command",
+    desc: "Designed for developers building AI-powered applications with text generation, search, and embeddings.",
+    img: "/tools/chatgpt.webp",
+    tags: ["Free", "API"],
+    rating: 4.8,
+    url: "https://cohere.com",
+  },
+];
 
 
 
@@ -32,7 +113,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   if (!matchedCategory || !matchedSubcategory) {
     return <main className="grow relative text-white flex items-center justify-center">
       Catgory Not Found
-      </main>
+    </main>
   }
 
 
