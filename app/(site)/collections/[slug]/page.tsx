@@ -11,13 +11,9 @@ import Image from "next/image";
 import { SELECT_OPTIONS, tools } from "../../tools-category/topic-page/page";
 import Link from "next/link";
 import { CATEGORIES } from "../page";
+import { normalizeString } from "@/lib/utils";
 
-const normalizeString = (str: string) => {
-  return str
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-};
+
 
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
