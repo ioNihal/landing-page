@@ -1,0 +1,255 @@
+[
+  {
+    "id": 1,
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "url": "/tools/chatgpt",
+    "verified": true,
+    "img": "/tools/chatgpt.webp",
+    "bannerImg": "/tools/chatgpt.webp",
+    "avatar": "/tools/chatgpt.webp",
+    "type": "Chatbots",
+    "tags": ["Free", "API", "Popular"],
+    "desc": "Advanced conversational AI for text generation, analysis, and creative tasks.",
+    "description": "Advanced conversational AI for text generation, analysis, and creative tasks.",
+    "price": 0,
+    "rating": 4.8,
+    "users": "100M+",
+    "growth": "+45%",
+    "featured": true,
+    "top": true,
+    "latest": true,
+    "useCases": ["Writing", "Debugging code", "Customer support"],
+    "keyFeatures": ["Large context windows", "High quality text generation", "Strong developer APIs"],
+    "pros": ["Excellent conversational quality", "Great for coding assistance", "Fast API responses"],
+    "cons": ["Can be verbose", "Limited image support", "Requires careful prompt engineering"],
+    "pricingPlans": [
+      {"name": "Free", "price": 0, "features": ["Limited usage", "Basic API"]},
+      {"name": "Pro", "price": 20, "features": ["Higher limits", "Priority support", "Extended context"]}
+    ],
+    "reviews": [
+      {"author": "Ravi M", "role": "Developer", "rating": 5, "content": "Handles complex prompts like a pro.", "date": "2025-11-02"},
+      {"author": "Priya S", "role": "Marketer", "rating": 4, "content": "Great for writing and content planning.", "date": "2025-06-12"}
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "claude-3-5",
+    "name": "Claude 3.5",
+    "url": "/tools/claude-3-5",
+    "verified": true,
+    "img": "/tools/claude.webp",
+    "bannerImg": "/tools/claude.webp",
+    "avatar": "/tools/claude.webp",
+    "type": "AI Assistant",
+    "tags": ["Premium", "New", "AI Assistant"],
+    "desc": "Next-generation assistant for complex reasoning and creative tasks.",
+    "description": "Next-generation assistant for complex reasoning and creative tasks.",
+    "price": 20,
+    "rating": 4.6,
+    "users": "8M+",
+    "growth": "+43%",
+    "featured": false,
+    "top": true,
+    "latest": true,
+    "useCases": ["Research", "Long-form content", "Enterprise apps"],
+    "keyFeatures": ["Safety-focused responses", "Strong reasoning", "Multi-turn context"],
+    "pros": ["Accurate reasoning", "Good safety controls", "Handles long context well"],
+    "cons": ["Paid tier for heavy usage", "Smaller ecosystem than others"],
+    "pricingPlans": [
+      {"name": "Standard", "price": 20, "features": ["Full model access", "Priority support"]}
+    ],
+    "reviews": [
+      {"author": "Arjun D", "role": "Tech User", "rating": 5, "content": "Best for in-depth analysis and long conversations.", "date": "2025-09-20"}
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "url": "/tools/midjourney",
+    "verified": true,
+    "img": "/tools/midjourney.webp",
+    "bannerImg": "/tools/midjourney.webp",
+    "avatar": "/tools/midjourney.webp",
+    "type": "Image Generation",
+    "tags": ["Creative"],
+    "desc": "Leading AI image generation with artistic style control.",
+    "description": "Leading AI image generation with artistic style control.",
+    "price": 10,
+    "rating": 4.7,
+    "users": "15M+",
+    "growth": "+38%",
+    "featured": true,
+    "top": true,
+    "latest": false,
+    "useCases": ["Concept art", "Advertising creatives", "Experimentation"],
+    "keyFeatures": ["Artistic styles", "Fast iterations", "Community prompts"],
+    "pros": ["Highly creative outputs", "Large community", "Fast speed"],
+    "cons": ["Subscription required", "Can be inconsistent with prompts"],
+    "pricingPlans": [
+      {"name": "Basic", "price": 10, "features": ["Monthly image credits"]},
+      {"name": "Pro", "price": 30, "features": ["Priority generation", "Higher quota"]}
+    ],
+    "reviews": [
+      {"author": "Maya R", "role": "Designer", "rating": 5, "content": "Amazing for rapid visual concepting.", "date": "2025-07-08"}
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "url": "/tools/github-copilot",
+    "verified": true,
+    "img": "/tools/githubcopilot.webp",
+    "bannerImg": "/tools/githubcopilot.webp",
+    "avatar": "/tools/githubcopilot.webp",
+    "type": "Developer Tools",
+    "tags": ["Developer"],
+    "desc": "AI pair programmer that writes code with you.",
+    "description": "AI pair programmer that writes code with you.",
+    "price": 10,
+    "rating": 4.5,
+    "users": "10M+",
+    "growth": "+35%",
+    "featured": true,
+    "top": true,
+    "latest": false,
+    "useCases": ["Code completion", "Refactoring", "Learning"],
+    "keyFeatures": ["IDE integrations", "Context-aware completions", "Support for many languages"],
+    "pros": ["Saves time", "Great for boilerplate", "Integrates with editors"],
+    "cons": ["Occasional incorrect suggestions", "Subscription for teams"],
+    "pricingPlans": [
+      {"name": "Individual", "price": 10, "features": ["Personal license"]},
+      {"name": "Team", "price": 24, "features": ["Team billing", "Admin controls"]}
+    ],
+    "reviews": [
+      {"author": "Sam K", "role": "Engineer", "rating": 5, "content": "Huge time saver for repetitive code.", "date": "2025-04-11"}
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "dalle-3",
+    "name": "DALL·E 3",
+    "url": "/tools/dalle-3",
+    "verified": false,
+    "img": "/tools/dalle.webp",
+    "bannerImg": "/tools/dalle.webp",
+    "avatar": "/tools/dalle.webp",
+    "type": "Image Generation",
+    "tags": ["Open AI"],
+    "desc": "Generative image model for creative image synthesis.",
+    "description": "Generative image model for creative image synthesis.",
+    "price": 15,
+    "rating": 4.6,
+    "users": "5M+",
+    "growth": "+58%",
+    "featured": false,
+    "top": false,
+    "latest": true,
+    "useCases": ["Marketing visuals", "Storyboarding", "Creative experiments"],
+    "keyFeatures": ["High fidelity images", "Text-to-image prompts", "Style control"],
+    "pros": ["High quality images", "Advanced style control"],
+    "cons": ["Rate limits on free tier"],
+    "pricingPlans": [
+      {"name": "Pay as you go", "price": 15, "features": ["Per-image pricing"]}
+    ],
+    "reviews": [
+      {"author": "Lea B", "role": "Creative Director", "rating": 4, "content": "Great image quality for campaigns.", "date": "2025-08-01"}
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "perplexity-ai",
+    "name": "Perplexity AI",
+    "url": "/tools/perplexity-ai",
+    "verified": false,
+    "img": "/tools/perplexity.webp",
+    "bannerImg": "/tools/perplexity.webp",
+    "avatar": "/tools/perplexity.webp",
+    "type": "Search & Research",
+    "tags": ["Search"],
+    "desc": "AI-powered search and research assistant.",
+    "description": "AI-powered search and research assistant.",
+    "price": 0,
+    "rating": 4.4,
+    "users": "25M+",
+    "growth": "+29%",
+    "featured": false,
+    "top": true,
+    "latest": false,
+    "useCases": ["Quick research", "Citation generation", "Summaries"],
+    "keyFeatures": ["Search integration", "Concise answers", "Citations"],
+    "pros": ["Fast answers", "Good citation support"],
+    "cons": ["Not as flexible for creative tasks"],
+    "pricingPlans": [
+      {"name": "Free", "price": 0, "features": ["Basic search"]}
+    ],
+    "reviews": [
+      {"author": "Nishant", "role": "Researcher", "rating": 4, "content": "Quick and useful for summarizing articles.", "date": "2025-05-12"}
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "runway-ml",
+    "name": "Runway ML",
+    "url": "/tools/runway-ml",
+    "verified": false,
+    "img": "/tools/runwayml.webp",
+    "bannerImg": "/tools/runwayml.webp",
+    "avatar": "/tools/runwayml.webp",
+    "type": "Video & Animation",
+    "tags": ["Creative"],
+    "desc": "AI tools for video editing and generation.",
+    "description": "AI tools for video editing and generation.",
+    "price": 25,
+    "rating": 4.6,
+    "users": "12M+",
+    "growth": "+40%",
+    "featured": false,
+    "top": false,
+    "latest": false,
+    "useCases": ["Video editing", "Background removal", "Style transfer"],
+    "keyFeatures": ["Video-aware models", "Fast rendering", "Collaboration tools"],
+    "pros": ["Great video tools", "Fast workflows"],
+    "cons": ["Higher pricing for pro features"],
+    "pricingPlans": [
+      {"name": "Starter", "price": 25, "features": ["Basic video export"]}
+    ],
+    "reviews": [
+      {"author": "Ana P", "role": "Video Editor", "rating": 4, "content": "Makes quick edits a breeze.", "date": "2025-03-10"}
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "jasper-ai",
+    "name": "Jasper AI",
+    "url": "/tools/jasper-ai",
+    "verified": false,
+    "img": "/tools/jasperai.webp",
+    "bannerImg": "/tools/jasperai.webp",
+    "avatar": "/tools/jasperai.webp",
+    "type": "Writing & Content",
+    "tags": ["Writing"],
+    "desc": "AI writing assistant for marketing and content.",
+    "description": "AI writing assistant for marketing and content.",
+    "price": 12,
+    "rating": 4.2,
+    "users": "3M+",
+    "growth": "+35%",
+    "featured": false,
+    "top": false,
+    "latest": false,
+    "useCases": ["Content marketing", "Ad copy", "Product descriptions"],
+    "keyFeatures": ["Marketing templates", "SEO integrations", "Team collaboration"],
+    "pros": ["Great marketing output", "Easy-to-use templates"],
+    "cons": ["Can be repetitive", "Requires editing"],
+    "pricingPlans": [
+      {"name": "Starter", "price": 12, "features": ["Basic templates"]},
+      {"name": "Business", "price": 40, "features": ["Team features", "Priority support"]}
+    ],
+    "reviews": [
+      {"author": "Tina L", "role": "Marketer", "rating": 4, "content": "Great for campaign copy and briefs.", "date": "2024-12-18"}
+    ]
+  }
+]

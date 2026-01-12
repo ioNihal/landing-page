@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Productivity AI",
+    "img": "/categories/aicompanions.png",
+    "subcategories": [
+      { "title": "Audio & Music", "slug": "audio-music" },
+      { "title": "Marketing", "slug": "marketing" }
+    ]
+  },
+  {
+    "title": "Creative AI",
+    "img": "/categories/productivityai2.png",
+    "subcategories": [
+      { "title": "Automation", "slug": "automation" },
+      { "title": "Chatbots", "slug": "chatbots" }
+    ]
+  },
+  {
+    "title": "AI Companions",
+    "img": "/categories/creativeai.png",
+    "subcategories": [
+      { "title": "Writing & Content", "slug": "writing-content" }
+    ]
+  }
+]
