@@ -96,15 +96,15 @@ export const tools = [
 
 
 
-export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function CategoryPage({ params }: { params: Promise<{ categorySlug: string }> }) {
+  const { categorySlug } = await params;
 
   const matchedCategory = CATEGORIES.find(cat =>
-    cat.subcategories.some(sub => sub.slug === slug)
+    cat.subcategories.some(sub => sub.slug === categorySlug)
   );
 
   const matchedSubcategory = matchedCategory?.subcategories.find(
-    sub => sub.slug === slug
+    sub => sub.slug === categorySlug
   );
 
   const catTitle = matchedCategory?.title ?? null;
