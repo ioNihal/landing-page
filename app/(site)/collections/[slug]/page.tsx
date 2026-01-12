@@ -8,7 +8,7 @@ import ToolCardTopicPage from "@/components/TopicPage/ToolCardTopicPage";
 import DropDownSelect from "@/components/ui/DropDownSelect";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { SELECT_OPTIONS, tools } from "../../_tools-category/topic-page/page";
+import { SELECT_OPTIONS, tools } from "../../tools-category/topic-page/page";
 import Link from "next/link";
 import { CATEGORIES } from "../page";
 
@@ -19,15 +19,15 @@ const normalizeString = (str: string) => {
     .replace(/^-+|-+$/g, "");
 };
 
-export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
-  const { category } = await params;
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
 
   const matchedCategory = CATEGORIES.find(cat =>
-    cat.subcategories.some(sub => sub.slug === category)
+    cat.subcategories.some(sub => sub.slug === slug)
   );
 
   const matchedSubcategory = matchedCategory?.subcategories.find(
-    sub => sub.slug === category
+    sub => sub.slug === slug
   );
 
   const catTitle = matchedCategory?.title ?? null;
