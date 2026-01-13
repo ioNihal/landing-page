@@ -50,7 +50,7 @@ export default function MainCard() {
 
                     <div className="flex items-center gap-3">
                         <span className="text-3xl font-semibold">$20</span>
-                        <span><Bookmark size={36} /></span>
+                        <span className="hover:text-cyan-400"><Bookmark size={36} /></span>
                     </div>
                 </div>
 

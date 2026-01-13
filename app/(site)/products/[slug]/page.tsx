@@ -30,10 +30,7 @@ export default async function ProductViewPage({ params }: { params: Promise<{ sl
       >
         <ol className="flex items-center gap-2 text-xs text-slate-300">
           <li>
-            <Link
-              href="/"
-              className="hover:text-white transition"
-            >
+            <Link href="/" className="hover:text-white transition" >
               Home
             </Link>
           </li>

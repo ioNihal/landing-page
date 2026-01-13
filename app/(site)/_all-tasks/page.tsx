@@ -1,7 +1,8 @@
 import TasksSection from "@/components/AllTasksPage/TasksSection";
 import Searchbox from "@/components/Hero/Searchbox";
-import { Brain, ChevronRight, Code, Flame, Image, PenTool, Target, TrendingUp } from "lucide-react";
+import { Brain, ChevronRight, Code, Flame, ImageIcon, PenTool, Target, TrendingUp } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image"
 
 const trendingTasks = [
     {
@@ -9,7 +10,7 @@ const trendingTasks = [
         description:
             "Create stunning artwork, illustrations, and visuals from text descriptions using advanced AI models.",
         tools: 247,
-        Icon: Image,
+        Icon: ImageIcon,
         iconBg: "bg-purple-600/20",
         iconColor: "text-purple-400",
     },
@@ -45,6 +46,8 @@ export default function AllTasksPage() {
 
             {/* Background */}
             <div className="absolute inset-0 -z-10 bg-grid" />
+            {/* bg particles */}
+            <Image src={'/bgParticles.svg'} alt="background-particles" fill className="object-contain z-20" />
             <div className="absolute inset-0 -z-10 bg-linear-to-br from-purple-500/20 to-green-400/20" />
 
             {/* Hero */}

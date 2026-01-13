@@ -85,9 +85,9 @@ export default function Footer() {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 py-6
                     flex flex-col sm:flex-row items-center justify-between gap-4
                     text-xs text-slate-400">
-
+                        
                     <span>
-                        © 2025 AIToolTracker. All rights reserved.
+                        {new Date().getFullYear()} &copy; AIToolTracker. All rights reserved.
                     </span>
 
                     <div className="flex items-center gap-6">

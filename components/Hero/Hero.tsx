@@ -3,6 +3,7 @@ import Searchbox from "./Searchbox";
 import Link from "next/link";
 import { FeaturedTool } from "@/lib/types";
 import FeaturedCard from "./FeaturedCard";
+import Image from "next/image";
 
 export const featuredAITools: FeaturedTool[] = [
     {
@@ -41,8 +42,12 @@ export default function Hero() {
     return (
         <section className="relative isolate bg-slate-950 text-white flex items-center">
             {/* bg grid */}
-            <div className="absolute inset-0 -z-10 bg-grid" />
-            <div className="absolute inset-0 -z-10 bg-linear-to-r from-purple-500/10 to-green-400/20" />
+            <div aria-hidden className="absolute inset-0 -z-10 bg-grid pointer-events-none">
+                {/* bg particles */}
+                <Image src={'/bgParticles.svg'} alt="background-particles" fill className="object-contain" />
+            </div>
+
+            <div aria-hidden className="absolute inset-0 -z-10 bg-linear-to-r from-purple-500/10 to-green-400/20" />
 
 
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center space-y-8">

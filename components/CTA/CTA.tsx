@@ -5,18 +5,11 @@ export default function CTA() {
     return (
         <section className="relative isolate bg-slate-950 text-white">
             <div className="absolute inset-0 -z-10 bg-grid" />
-            <div className="absolute inset-0 -z-10 bg-linear-to-r from-transparent via-green-400/20 to-transparent" />
+            <div className="absolute inset-0 -z-10 bg-linear-to-r from-cyan-400/20 via-green-400/20 to-cyan-400/20" />
 
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 py-20 text-center">
                 <div className="relative inline-flex flex-wrap justify-center items-center gap-3 mb-8 sm:mb-10 px-2">
-                    {/* Glow layer */}
-                    <span
-                        aria-hidden
-                        className="absolute inset-0 blur-xl opacity-20
-                        bg-linear-to-r from-cyan-400 to-purple-400"
-                    />
-
-
+                    
                     <p className="relative inline-flex flex-wrap items-center justify-center gap-2
                         text-base sm:text-xl font-medium text-center bg-linear-to-r from-cyan-400 to-purple-400
                         bg-clip-text text-transparent " >
@@ -29,7 +22,7 @@ export default function CTA() {
                 <h2 className="text-3xl sm:text-4xl lg:text-6xl tracking-tight">
 
                     Join the
-                    <span className="block bg-linear-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent mt-2 font-bold">
+                    <span className="block bg-linear-to-r from-cyan-400 to-70% to-purple-400 bg-clip-text text-transparent mt-2 font-bold">
                         AI Revolution
                     </span>
                 </h2>
@@ -63,7 +56,7 @@ export default function CTA() {
                         href="/"
                         className="inline-flex items-center px-6 py-3 rounded-md
                         border border-white/20 text-white bg-black/20
-                        hover:bg-white/10 transition">
+                        hover:bg-gray-800 transition">
                         Submit Your Tool
                     </Link>
                 </div>

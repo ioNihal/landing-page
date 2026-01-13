@@ -50,14 +50,14 @@ export default function Header() {
                                     All AI Tools <ChevronDown size={16} />
                                 </Link>
 
-                                <div className="absolute left-0 top-full mt-2 w-48 rounded-md bg-slate-800 shadow-lg
+                                <div className="absolute left-0 top-full mt-2 w-48 rounded-md bg-white text-black shadow-lg
                                     opacity-0 invisible translate-y-1
                                     group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
                                     transition-all duration-200 z-50">
                                     <ul className="p-1.5">
                                         {AI_TOOLS_SUBMENU.map(i => (
                                             <li key={i.slug}>
-                                                <Link href={`/ai-tools?pricing=${i.slug}`} className="block px-4 py-2 text-sm hover:bg-slate-700 rounded-sm">
+                                                <Link href={`/ai-tools?pricing=${i.slug}`} className="block px-4 py-2 text-sm hover:bg-black hover:text-white rounded-sm">
                                                     {i.title}
                                                 </Link>
                                             </li>

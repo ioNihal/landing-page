@@ -14,7 +14,7 @@ export default function Searchbox({ text = "Search the best AI tools for every n
             placeholder-gray-400 focus:outline-none" />
             <button
                 type="submit"
-                className="rounded-full px-8 bg-cyan-400 p-3">
+                className="rounded-full px-8 bg-cyan-400 p-3 hover:bg-cyan-300">
                 <Search size={18} />
             </button>
         </form>

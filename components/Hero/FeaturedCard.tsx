@@ -17,7 +17,7 @@ export default function FeaturedCard({ tool }: { tool: FeaturedTool }) {
                     <Star size={12} fill="yellow" />
                     Featured
                 </span>
-                <span>
+                <span className="hover:text-cyan-400 cursor-pointer">
                     <Bookmark size={18} />
                 </span>
             </div>
