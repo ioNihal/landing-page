@@ -6,6 +6,7 @@ import MainCard from "@/components/ToolDetailsPage/MainCard";
 import PricingPlansCard from "@/components/ToolDetailsPage/PricingPlansCard";
 import { Check, X } from "lucide-react";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const KEY_FEATURES = [
   "Advanced natural language understanding and generation",
@@ -18,8 +19,8 @@ const KEY_FEATURES = [
 ]
 
 //make dynamic later
-export default async function ProductViewPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function ProductViewPage({ params }: PageProps<'/products/[slug]'>) {
+
 
   return (
     <main className="relative isolate bg-slate-950 text-white grow">
@@ -37,9 +38,15 @@ export default async function ProductViewPage({ params }: { params: Promise<{ sl
 
           <li className="opacity-60">/</li>
 
-          <li className="text-white font-medium">
-            {slug}
-          </li>
+          <Suspense fallback={<li className="text-white font-medium">
+            loading...
+          </li>}>
+            {params.then(({ slug }) => (
+              <li className="text-white font-medium">
+                {slug}
+              </li>
+            ))}
+          </Suspense>
         </ol>
       </nav>
 
