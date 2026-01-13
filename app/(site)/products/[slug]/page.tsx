@@ -20,6 +20,8 @@ const KEY_FEATURES = [
 //make dynamic later
 export default async function ProductViewPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  console.log("Products page visited")
+  console.log("Products slug", slug)
 
   return (
     <main className="relative isolate bg-slate-950 text-white grow">
