@@ -135,15 +135,6 @@ export const tools = [
   },
 ];
 
-
-export function generateStaticParams() {
-  return CATEGORIES.flatMap(cat =>
-    cat.subcategories.map(sub => ({
-      slug: sub.slug,
-    }))
-  );
-}
-
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
