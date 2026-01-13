@@ -138,9 +138,6 @@ export const tools = [
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  console.log("Collections page visited")
-  console.log("Collections slug", slug)
-
   const matchedCategory = CATEGORIES.find(cat =>
     cat.subcategories.some(sub => sub.slug === slug)
   );

@@ -4,7 +4,7 @@ import ReviewSection from "@/components/Shared/ReviewSection";
 import AlternateToolsCard from "@/components/ToolDetailsPage/AlternateToolsCard";
 import MainCard from "@/components/ToolDetailsPage/MainCard";
 import PricingPlansCard from "@/components/ToolDetailsPage/PricingPlansCard";
-import { Check, X } from "lucide-react";
+import { Check, ChevronRight, X } from "lucide-react";
 import Link from "next/link";
 
 const KEY_FEATURES = [
@@ -18,30 +18,15 @@ const KEY_FEATURES = [
 ]
 
 //make dynamic later
-export default async function ProductViewPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-
+export default function ToolDetailPage() {
   return (
     <main className="relative isolate bg-slate-950 text-white grow">
-      {/* breadcrumb */}
-      <nav
-        aria-label="Breadcrumb"
-        className="absolute top-6 left-6 z-20"
-      >
-        <ol className="flex items-center gap-2 text-xs text-slate-300">
-          <li>
-            <Link href="/" className="hover:text-white transition" >
-              Home
-            </Link>
-          </li>
-
-          <li className="opacity-60">/</li>
-
-          <li className="text-white font-medium">
-            {slug}
-          </li>
-        </ol>
-      </nav>
+      <div className="absolute top-10 left-10 hidden lg:inline-flex items-center text-xs ">
+        <Link className="text-gray-300" href={"/"}>Home</Link>&nbsp;<ChevronRight size={16} />
+        <Link className="text-gray-300" href="/tools-category">AI&nbsp;Tool&nbsp;Category</Link>&nbsp;<ChevronRight size={16} />
+        <Link className="text-gray-300" href={"/tools-category/topic-page"}>Topic&nbsp;Page</Link><ChevronRight size={16} />
+        &nbsp;Tool&nbsp;Detail&nbsp;Page
+      </div>
 
       <div>
         {/* Main card */}
@@ -54,7 +39,6 @@ export default async function ProductViewPage({ params }: { params: Promise<{ sl
         <div>
           {/* overview card */}
           <section className="rounded-xl border border-white/20 bg-slate-950 p-6">
-            {/* dangerously insert html here */}
             <h2 className="text-lg font-semibold mb-3">Overview</h2>
 
             <p className="text-sm text-slate-300 leading-relaxed">
