@@ -19,7 +19,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 1,
         name: "ChatGPT",
-        url: "/",
+        url: "/products/chatgpt",
         avatar: "/tools/chatgpt.webp",
         type: "Chatbots",
         tags: ["Most Popular"],
@@ -31,7 +31,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 2,
         name: "Midjourney",
-        url: "/",
+        url: "/products/midjourney",
         avatar: "/tools/midjourney.webp",
         type: "Image Generation",
         tags: ["Creative"],
@@ -43,7 +43,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 3,
         name: "GitHub Copilot",
-        url: "/",
+        url: "/products/github-copilot",
         avatar: "/tools/githubcopilot.webp",
         type: "Developer Tools",
         tags: ["Developer"],
@@ -55,7 +55,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 4,
         name: "DALL·E 3",
-        url: "/",
+        url: "/products/dall-3",
         avatar: "/tools/dalle.webp",
         type: "Image Generation",
         tags: ["Open AI"],
@@ -67,7 +67,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 5,
         name: "Perplexity AI",
-        url: "/",
+        url: "/products/perplexity-ai",
         avatar: "/tools/perplexity.webp",
         type: "Search & Research",
         tags: ["Search"],
@@ -79,7 +79,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 6,
         name: "Claude 3.5",
-        url: "/",
+        url: "/products/claude",
         avatar: "/tools/claude.webp",
         type: "AI Assistant",
         tags: ["New"],
@@ -91,7 +91,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 7,
         name: "Jasper AI",
-        url: "/",
+        url: "/products/jasper-ai",
         avatar: "/tools/jasperai.webp",
         type: "Writing & Content",
         tags: ["Writing"],
@@ -103,7 +103,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 8,
         name: "Runway ML",
-        url: "/",
+        url: "/products/runway-ml",
         avatar: "/tools/runwayml.webp",
         type: "Video & Animation",
         tags: ["Creative"],
@@ -115,7 +115,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 9,
         name: "ChatGPT",
-        url: "/",
+        url: "/products/chatgpt",
         avatar: "/tools/chatgpt.webp",
         type: "Chatbots",
         tags: ["Most Popular"],
@@ -127,7 +127,7 @@ const TOP_TOOLS: ToolRow[] = [
     {
         id: 10,
         name: "ChatGPT",
-        url: "/",
+        url: "/products/chatgpt",
         avatar: "/tools/chatgpt.webp",
         type: "Chatbots",
         tags: ["Most Popular"],
@@ -244,13 +244,15 @@ export default function TopAITools() {
 
                                         <div className="flex gap-4">
                                             <div className="w-12 h-12 rounded-md overflow-hidden shrink-0">
-                                                <Image
-                                                    src={tool.avatar}
-                                                    alt={tool.name}
-                                                    width={72}
-                                                    height={72}
-                                                    className="object-cover w-full h-full"
-                                                />
+                                                <Link href={tool.url}>
+                                                    <Image
+                                                        src={tool.avatar}
+                                                        alt={tool.name}
+                                                        width={72}
+                                                        height={72}
+                                                        className="object-cover w-full h-full"
+                                                    />
+                                                </Link>
                                             </div>
 
                                             <div className="flex-1">
@@ -291,7 +293,7 @@ export default function TopAITools() {
 
                                         <div className="flex items-center justify-end">
                                             <Link
-                                                href="/"
+                                                href={tool.url}
                                                 className="text-slate-300 hover:text-white p-2 rounded-md"
                                                 aria-label={`Open ${tool.name}`}
                                             >

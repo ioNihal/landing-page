@@ -38,7 +38,7 @@ export default function Header() {
                             src="/header-logo.png"
                             alt="AI Tools Tracker"
                             width={120}
-                            height={40}
+                            height={60}
                             priority
                         />
                     </Link>

@@ -13,7 +13,7 @@ const LatestToolsList: AITools[] = [
     {
         id: 0,
         name: "ChatGPT",
-        url: "/",
+        url: "/products/chatgpt",
         verified: false,
         img: "/featured/placeholder.webp",
         bannerImg: "/tools/chatgpt.webp",
@@ -27,7 +27,7 @@ const LatestToolsList: AITools[] = [
     {
         id: 1,
         name: "Claude 3.5",
-        url: "/",
+        url: "/products/claude",
         verified: false,
         img: "/tools/claude.webp",
         bannerImg: "/tools/claude.webp",
@@ -41,7 +41,7 @@ const LatestToolsList: AITools[] = [
     {
         id: 2,
         name: "Flux Pro",
-        url: "/",
+        url: "/products/flux-pro",
         verified: false,
         img: "/tools/flux.webp",
         bannerImg: "/tools/flux.webp",
@@ -55,7 +55,7 @@ const LatestToolsList: AITools[] = [
     {
         id: 3,
         name: "ChatGPT",
-        url: "/",
+        url: "/products/chatgpt",
         verified: true,
         img: "/featured/placeholder.webp",
         bannerImg: "/tools/chatgpt.webp",
@@ -69,7 +69,7 @@ const LatestToolsList: AITools[] = [
     {
         id: 4,
         name: "Claude 3.5",
-        url: "/",
+        url: "/products/claude",
         verified: true,
         img: "/tools/claude.webp",
         bannerImg: "/tools/claude.webp",
@@ -83,7 +83,7 @@ const LatestToolsList: AITools[] = [
     {
         id: 5,
         name: "Flux Pro",
-        url: "/",
+        url: "/products/flux-pro",
         verified: true,
         img: "/tools/flux.webp",
         bannerImg: "/tools/flux.webp",

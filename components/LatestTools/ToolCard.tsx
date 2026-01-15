@@ -10,13 +10,15 @@ export default function ToolCard({ tool }: { tool: AITools }) {
             p-4 lg:p-5 hover:border-white/25 transition">
 
             <div className="w-full lg:w-64 h-full rounded-lg overflow-hidden">
-                <Image
-                    src={tool.bannerImg}
-                    alt={tool.name}
-                    width={340}
-                    height={240}
-                    className="w-full h-full object-cover"
-                />
+                <Link href={tool.url}>
+                    <Image
+                        src={tool.bannerImg}
+                        alt={tool.name}
+                        width={340}
+                        height={240}
+                        className="w-full h-full object-cover"
+                    />
+                </Link>
             </div>
 
             <div className="flex-1">

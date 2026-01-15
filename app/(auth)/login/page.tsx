@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function LoginPage() {
   return (
-    <section className="min-h-screen w-full flex items-stretch">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12 py-28 lg:py-8 gap-8">
+    <section className="min-h-screen w-full flex items-center">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12 gap-8 py-10 2xl:py-0">
           {/* FORM */}
-          <div className="w-full lg:w-[45%]">
+          <div className="flex-1 flex flex-col">
             <header className="mb-6 text-center">
               <h1 className="text-4xl font-bold bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Log In
@@ -131,8 +131,8 @@ export default function LoginPage() {
           </div>
 
           {/* IMAGE */}
-          <aside className="hidden lg:block w-full lg:w-[55%] h-screen sticky top-10">
-            <div className="relative w-full h-full">
+          <aside className="hidden lg:flex flex-1 min-h-screen  2xl:min-h-[calc(100vh-40px)] py-6">
+            <div className="relative w-full ">
               <Image src="/signup.png" alt="Security illustration" fill className="rounded-3xl object-cover" priority />
               <div className="absolute -top-5 -left-5 z-50 bg-fuchsia-500/60 text-black
                    flex flex-col items-center p-3 rounded-lg text-sm">

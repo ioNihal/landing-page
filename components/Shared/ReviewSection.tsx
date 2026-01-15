@@ -14,7 +14,7 @@ export default function ReviewSection({ writeReview = false }: { writeReview?: b
             <div className="flex items-center justify-between mb-4">
                 <h4 className="font-semibold text-lg">Reviews</h4>
                 <div className="flex flex-col items-center">
-                    <span className="text-xl">4.8 / 5</span>
+                    <span className="text-xl font-semibold">4.8 / 5</span>
                     <span className="text-xs text-slate-300">Overall Rating</span>
                 </div>
             </div>

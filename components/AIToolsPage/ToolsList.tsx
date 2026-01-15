@@ -187,14 +187,16 @@ export default function ToolsList() {
                             p-6 hover:border-cyan-400/60 transition"
                         >
                             {/* Image */}
-                            <div className="relative h-16 w-16 shrink-0 rounded-md overflow-hidden bg-slate-800">
-                                <Image
-                                    src={tool.img}
-                                    alt={tool.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
+                            <Link href={`products/${tool.slug}`}>
+                                <div className="relative h-16 w-16 shrink-0 rounded-md overflow-hidden bg-slate-800">
+                                    <Image
+                                        src={tool.img}
+                                        alt={tool.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            </Link>
 
 
                             <div className="flex-1 space-y-1">
@@ -233,7 +235,7 @@ export default function ToolsList() {
                                 </Link>
                                 <Link
                                     href={tool.url}
-                                    className="px-4 py-2 rounded-md bg-cyan-500 text-sm 
+                                    className="px-4 py-2 rounded-md bg-cyan-500 text-sm w-full
                                     flex items-center justify-center gap-1 hover:bg-cyan-400 transition"
                                 >
                                     Visit <ExternalLink size={14} />

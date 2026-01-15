@@ -96,12 +96,6 @@ const FAQS = [
 export default function SubmitAIToolPage() {
     return (
         <main className="relative isolate bg-slate-950 text-white">
-            {/* Breadcrumb */}
-            <div className="absolute top-10 left-10 hidden lg:inline-flex items-center text-xs">
-                <Link href="/">Home</Link>
-                <ChevronRight size={14} />
-                <span>Submit AI Tools</span>
-            </div>
 
             {/* Background */}
             <div className="absolute inset-0 -z-10 bg-grid" />

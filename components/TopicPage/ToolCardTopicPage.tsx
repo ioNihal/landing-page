@@ -10,6 +10,7 @@ type Tool = {
   tags: string[];
   rating: number;
   url: string;
+  toolUrl: string;
 };
 
 export default function ToolCardTopicPage({ tool }: { tool: Tool }) {
@@ -24,16 +25,10 @@ export default function ToolCardTopicPage({ tool }: { tool: Tool }) {
             {tool.name}
           </h3>
 
-          <span className="flex items-center gap-1 text-sm text-slate-300">
+          <span className="flex items-center gap-1 text-sm text-slate-300 font-semibold">
             <Star size={14} className="text-yellow-400" fill="currentColor" />
             {tool.rating}
           </span>
-
-
-          <Link href={tool.url} target="_blank" className="inline-flex ml-auto items-center gap-2 rounded-md
-              bg-cyan-500 px-3 py-1.5 text-sm font-medium hover:bg-cyan-600 transition">
-            Visit <ExternalLink size={14} />
-          </Link>
         </div>
 
         {/* Description */}
@@ -42,7 +37,7 @@ export default function ToolCardTopicPage({ tool }: { tool: Tool }) {
         </p>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-auto">
           {tool.tags.map((t) => (
             <span key={t} className={` text-xs px-2 py-1 rounded flex items-center justify-center
                 ${["Free", "Paid", "Premium"].includes(t)
@@ -54,10 +49,18 @@ export default function ToolCardTopicPage({ tool }: { tool: Tool }) {
         </div>
       </div>
 
-      {/* IMAGE */}
-      <div className=" relative h-32 w-full sm:h-32 sm:w-32 sm:shrink-0 overflow-hidden rounded-xl
+      <div className="flex flex-col gap-3">
+        {/* IMAGE */}
+        <Link href={tool.toolUrl}>
+          <div className=" relative h-32 w-full sm:h-32 sm:w-32 sm:shrink-0 overflow-hidden rounded-xl
           border border-white/10 bg-white/5">
-        <Image src={tool.img} alt={`${tool.name}-preview`} fill className="object-cover opacity-80" />
+            <Image src={tool.img} alt={`${tool.name}-preview`} fill className="object-cover opacity-80" />
+          </div>
+        </Link>
+        <Link href={tool.url} target="_blank" className="flex justify-center items-center gap-2 rounded-md
+              bg-cyan-500 px-3 py-1.5 text-sm font-medium hover:bg-cyan-600 transition">
+          Visit <ExternalLink size={14} />
+        </Link>
       </div>
     </div>
   );

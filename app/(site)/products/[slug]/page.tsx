@@ -4,7 +4,8 @@ import ReviewSection from "@/components/Shared/ReviewSection";
 import AlternateToolsCard from "@/components/ToolDetailsPage/AlternateToolsCard";
 import MainCard from "@/components/ToolDetailsPage/MainCard";
 import PricingPlansCard from "@/components/ToolDetailsPage/PricingPlansCard";
-import { Check, X } from "lucide-react";
+import { denormalizeAndCapitalizeString } from "@/lib/utils";
+import { Check, ChevronRight, X } from "lucide-react";
 import Link from "next/link";
 
 const KEY_FEATURES = [
@@ -24,34 +25,34 @@ export default async function ProductViewPage({ params }: { params: Promise<{ sl
   return (
     <main className="relative isolate bg-slate-950 text-white grow">
       {/* breadcrumb */}
-      <nav
-        aria-label="Breadcrumb"
-        className="absolute top-6 left-6 z-20"
-      >
-        <ol className="flex items-center gap-2 text-xs text-slate-300">
-          <li>
-            <Link href="/" className="hover:text-white transition" >
-              Home
-            </Link>
-          </li>
-
-          <li className="opacity-60">/</li>
-
-          <li className="text-white font-medium">
-            {slug}
-          </li>
-        </ol>
-      </nav>
 
       <div>
         {/* Main card */}
-        <section className="max-w-7xl mx-auto px-4 pt-10 lg:pt-28 pb-10">
+        <section className="max-w-7xl mx-auto px-4 py-6 pb-10">
+          <nav
+            aria-label="Breadcrumb"
+            className="py-4 mb-4"
+          >
+            <ol className="flex items-center gap-2 text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-white transition" >
+                  Home
+                </Link>
+              </li>
+
+              <li className="opacity-60"><ChevronRight size={14} /></li>
+
+              <li className="text-white font-medium">
+                {denormalizeAndCapitalizeString(slug)}
+              </li>
+            </ol>
+          </nav>
           <MainCard />
         </section>
       </div>
 
-      <div className="max-w-7xl mx-auto pb-10 px-4 grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
-        <div>
+      <div className="max-w-7xl mx-auto pb-10 px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="col-span-2">
           {/* overview card */}
           <section className="rounded-xl border border-white/20 bg-slate-950 p-6">
             {/* dangerously insert html here */}
@@ -173,8 +174,8 @@ export default async function ProductViewPage({ params }: { params: Promise<{ sl
           AI Alternatives of Claude 3.5
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {["Google Gemini", "Microsoft Copilot", "Perplexity AI", "Poe by Quora", "Jasper AI", "Writesonic"].map(name => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {["Google Gemini", "Microsoft Copilot", "Perplexity AI", "Poe by Quora", "Jasper AI", "Writesonic", "Stable Diffusion"].map(name => (
             <AlternateToolsCard key={name} name={name} />
           ))}
         </div>

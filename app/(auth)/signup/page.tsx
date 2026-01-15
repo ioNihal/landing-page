@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function SignUpPage() {
     return (
-        <section className="min-h-screen w-full flex items-stretch">
-            <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
-                <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12 py-8 lg:py-8 gap-8">
+        <section className="min-h-screen w-full flex items-center">
+            <div className="w-full max-w-7xl mx-auto px-4 py-10">
+                <div className="flex flex-col lg:flex-row  lg:gap-12 gap-8">
                     {/* FORM */}
-                    <div className="w-full lg:w-[45%]">
+                    <div className="flex-1">
                         <header className="mb-8 text-center">
                             <div
                                 className="w-max mx-auto bg-emerald-400/30 border border-emerald-400 text-emerald-400
@@ -190,15 +190,15 @@ export default function SignUpPage() {
                     </div>
 
                     {/* IMAGE */}
-                    <aside className="hidden lg:block w-full lg:w-[55%] h-screen sticky top-5">
-                        <div className="relative w-full h-full">
+                    <aside className="hidden lg:flex flex-1 min-h-screen py-6">
+                        <div className="relative w-full">
                             <Image src="/signup.png" alt="Security illustration" fill className="object-cover rounded-3xl" priority />
                             <div className="absolute -top-5 -right-5 z-50 bg-amber-200 text-black
                                 flex items-center gap-2 p-2 px-4 rounded-2xl text-xs">
                                 <CircleCheck size={22} />
                                 <div className="flex flex-col">
                                     Free Access
-                                    <span className="text-gray-500">Discover 10,000+ AI tools for free</span>
+                                    <span className="text-black/60">Discover 10,000+ AI tools for free</span>
                                 </div>
                             </div>
                             <div className="absolute top-40 -left-5 z-50 bg-emerald-400 text-black
@@ -206,7 +206,7 @@ export default function SignUpPage() {
                                 <TrendingUp size={22} />
                                 <div className="flex flex-col">
                                     Early Access
-                                    <span className="text-gray-500">First to know about new AI tools</span>
+                                    <span className="text-black/60">First to know about new AI tools</span>
                                 </div>
                             </div>
                             <div className="absolute bottom-30 -right-5 z-50 bg-fuchsia-500 text-black
@@ -214,7 +214,7 @@ export default function SignUpPage() {
                                 <Star size={22} />
                                 <div className="flex flex-col">
                                     Personalized
-                                    <span className="text-gray-500">AI recommendations just for you</span>
+                                    <span className="text-black/60">AI recommendations just for you</span>
                                 </div>
                             </div>
                             <div className="absolute -bottom-5 -left-5 z-50 bg-cyan-500 text-black
@@ -222,7 +222,7 @@ export default function SignUpPage() {
                                 <Users size={22} />
                                 <div className="flex flex-col">
                                     Community
-                                    <span className="text-gray-500">Connect with 50K+ AI enthusiasts</span>
+                                    <span className="text-black/60">Connect with 50K+ AI enthusiasts</span>
                                 </div>
                             </div>
                         </div>

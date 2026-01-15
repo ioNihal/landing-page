@@ -26,6 +26,7 @@ export const tools = [
         tags: ["Free", "Popular", "API"],
         rating: 4.8,
         url: "https://www.anthropic.com/claude",
+        toolUrl: "/products/claude"
     },
     {
         id: 2,
@@ -35,6 +36,7 @@ export const tools = [
         tags: ["Free", "API"],
         rating: 4.8,
         url: "https://www.anthropic.com/claude",
+        toolUrl: "/products/claude"
     },
     {
         id: 3,
@@ -44,6 +46,7 @@ export const tools = [
         tags: ["Free", "Popular", "API"],
         rating: 4.8,
         url: "https://cohere.com",
+        toolUrl: "/products/claude"
     },
     {
         id: 4,
@@ -53,6 +56,7 @@ export const tools = [
         tags: ["Free", "Open Source"],
         rating: 4.8,
         url: "https://huggingface.co/chat",
+        toolUrl: "/products/claude"
     },
     {
         id: 5,
@@ -62,6 +66,7 @@ export const tools = [
         tags: ["Free", "Popular"],
         rating: 4.8,
         url: "https://gemini.google.com",
+        toolUrl: "/products/claude"
     },
     {
         id: 6,
@@ -71,6 +76,7 @@ export const tools = [
         tags: ["Paid", "API", "Popular"],
         rating: 4.8,
         url: "https://openai.com",
+        toolUrl: "/products/claude"
     },
     {
         id: 7,
@@ -80,6 +86,7 @@ export const tools = [
         tags: ["Free", "API"],
         rating: 4.8,
         url: "https://www.anthropic.com/claude",
+        toolUrl: "/products/claude"
     },
     {
         id: 8,
@@ -89,6 +96,7 @@ export const tools = [
         tags: ["Free", "API"],
         rating: 4.8,
         url: "https://cohere.com",
+        toolUrl: "/products/claude"
     },
 ];
 

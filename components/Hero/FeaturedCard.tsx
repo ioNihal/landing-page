@@ -24,12 +24,13 @@ export default function FeaturedCard({ tool }: { tool: FeaturedTool }) {
 
             {/* Header */}
             <div className="flex gap-2">
-                <Image
-                    src={tool.img}
-                    alt={tool.name}
-                    width={56}
-                    height={56}
-                    className="h-8 w-8 rounded-lg object-cover" />
+                <Link href={tool.url}>
+                    <Image
+                        src={tool.img}
+                        alt={tool.name}
+                        width={56}
+                        height={56}
+                        className="h-8 w-8 rounded-lg object-cover" /></Link>
 
                 <div className="flex-1">
                     <h2 className="text-sm font-semibold">{tool.name}</h2>

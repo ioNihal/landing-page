@@ -69,6 +69,7 @@ export const tools = [
     tags: ["Free", "Popular", "API"],
     rating: 4.8,
     url: "https://www.anthropic.com/claude",
+    toolUrl: "/products/claude"
   },
   {
     id: 2,
@@ -78,6 +79,7 @@ export const tools = [
     tags: ["Free", "API"],
     rating: 4.8,
     url: "https://www.anthropic.com/claude",
+    toolUrl: "/products/claude"
   },
   {
     id: 3,
@@ -87,6 +89,7 @@ export const tools = [
     tags: ["Free", "Popular", "API"],
     rating: 4.8,
     url: "https://cohere.com",
+    toolUrl: "/products/cohore-command"
   },
   {
     id: 4,
@@ -96,6 +99,7 @@ export const tools = [
     tags: ["Free", "Open Source"],
     rating: 4.8,
     url: "https://huggingface.co/chat",
+    toolUrl: "/products/hugginface-chat"
   },
   {
     id: 5,
@@ -105,6 +109,7 @@ export const tools = [
     tags: ["Free", "Popular"],
     rating: 4.8,
     url: "https://gemini.google.com",
+    toolUrl: "/products/bard-ai"
   },
   {
     id: 6,
@@ -114,6 +119,7 @@ export const tools = [
     tags: ["Paid", "API", "Popular"],
     rating: 4.8,
     url: "https://openai.com",
+    toolUrl: "/products/gpt-4-turbo"
   },
   {
     id: 7,
@@ -123,6 +129,7 @@ export const tools = [
     tags: ["Free", "API"],
     rating: 4.8,
     url: "https://www.anthropic.com/claude",
+    toolUrl: "/products/claude"
   },
   {
     id: 8,
@@ -132,6 +139,7 @@ export const tools = [
     tags: ["Free", "API"],
     rating: 4.8,
     url: "https://cohere.com",
+    toolUrl: "/products/cohore-command"
   },
 ];
 
@@ -167,37 +175,35 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
         <div aria-hidden className="absolute inset-0 -z-10 bg-linear-to-r from-purple-500/10 to-green-400/20" />
 
-        {/* breadcrumb */}
-        <nav
-          aria-label="Breadcrumb"
-          className="absolute top-6 left-6 z-20"
-        >
-          <ol className="flex items-center gap-2 text-xs text-slate-300">
-            <li>
-              <Link href="/" className="hover:text-white transition" >
-                Home
-              </Link>
-            </li>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-center">
+          {/* breadcrumb */}
+          <nav
+            aria-label="Breadcrumb"
+            className="py-4 mb-4"
+          >
+            <ol className="flex items-center gap-2 text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-white transition" >
+                  Home
+                </Link>
+              </li>
 
-            <li className="opacity-60">/</li>
+              <li className="opacity-60">/</li>
 
-            <li>
-              <Link href={`/collections/${normalizeString(catTitle || "")}`} className="hover:text-white transition" >
-                {catTitle}
-              </Link>
-            </li>
+              <li>
+                <Link href={`/collections/${normalizeString(catTitle || "")}`} className="hover:text-white transition" >
+                  {catTitle}
+                </Link>
+              </li>
 
-            <li className="opacity-60">/</li>
+              <li className="opacity-60">/</li>
 
-            <li className="text-white font-medium">
-              {subcatTitle}
-            </li>
-          </ol>
-        </nav>
+              <li className="text-white font-medium">
+                {subcatTitle}
+              </li>
+            </ol>
+          </nav>
 
-
-
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
           {/* badge text */}
           <div className="flex items-center justify-center gap-2 w-max mx-auto
                      bg-linear-to-r from-cyan-400/20 to-purple-400/20 rounded-full
@@ -237,16 +243,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         </div>
       </div>
 
-      <div className="bg-slate-950 py-10">
-        <div className="max-w-7xl mx-auto pb-10 px-4 grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8">
-          <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-3 lg:gap-0">
-            <h2 className="text-lg lg:text-2xl font-semibold">Best AI {subcatTitle} Tools to Explore in 2025</h2>
-            <DropDownSelect options={SELECT_OPTIONS} />
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto pb-10 px-4 grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8">
+      <div className="bg-slate-950 py-6">
+        <div className="max-w-7xl mx-auto pb-10 px-4 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8">
           {/* main content */}
           <div className="space-y-6">
+            <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-3 lg:gap-0">
+              <h2 className="text-lg lg:text-2xl font-semibold">Best AI {subcatTitle} Tools to Explore in {new Date().getFullYear()}</h2>
+              <DropDownSelect options={SELECT_OPTIONS} />
+            </div>
             <div className="space-y-6">
               {tools.map((tool) => (
                 <ToolCardTopicPage key={tool.id} tool={tool} />

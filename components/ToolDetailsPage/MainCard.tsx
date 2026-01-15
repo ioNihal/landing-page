@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function MainCard() {
     return (
-        <article className="flex flex-col lg:flex-row gap-8">
-            <div className="flex-1 lg:flex-2 rounded-2xl ring-2 ring-white/50 p-4 bg-linear-to-br from-slate-950 to-neutral-500/50">
+        <article className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="col-span-1 lg:col-span-2 rounded-2xl border border-gray-800 p-3 lg:p-8 bg-gray-900">
                 <div className="flex items-start gap-4">
                     <Image
                         src="/tools/chatgpt.webp"
@@ -16,41 +16,43 @@ export default function MainCard() {
                     />
 
                     <div className="flex-1">
-                        <h1 className="text-2xl font-semibold flex items-center gap-2">
+                        <h1 className="text-xl lg:text-3xl font-semibold flex items-center gap-2 bg-linear-to-r
+                        from-cyan-400 to-20% to-purple-400 bg-clip-text text-transparent">
                             Claude 3.5
                             <span>
                                 <Verified className="text-black" fill="blue" />
                             </span>
                         </h1>
 
-                        <p className="text-sm bg-neutral-700 w-max px-2 py-0.5 rounded-sm mt-1">
+                        <p className="text-xs border border-gray-600 w-max px-2 py-1 rounded-sm mt-1">
                             Chatbots
                         </p>
 
-                        <div className="mt-4 flex flex-col lg:flex-row lg:items-center gap-4">
-                            <div className="flex flex-wrap gap-2">
-                                {["Free", "New", "AI Assistant", "Popular"].map(t => (
-                                    <span key={t} className={` text-xs px-2 py-1 rounded flex items-center justify-center
-                                        ${["Free", "Paid", "Premium"].includes(t)
-                                            ? "bg-green-200 text-green-800"
-                                            : "border border-white/20 text-slate-300"} `} >
-                                        {t}
-                                    </span>
-                                ))}
-                            </div>
-                            <div className=" inline-flex items-center gap-1 text-xs text-slate-400">
-                                <Star size={14} className="text-yellow-400" fill="currentColor" />
-                                4.5 (8,921 reviews)
-                                <span className="ml-2 inline-flex items-center">
-                                    <Users size={14} className="mr-1" /> 8M<Plus size={12} />
-                                </span>
-                            </div>
-                        </div>
+
                     </div>
 
                     <div className="flex items-center gap-3">
-                        <span className="text-3xl font-semibold">$20</span>
-                        <span className="hover:text-cyan-400"><Bookmark size={36} /></span>
+                        <span className="text-xl lg:text-3xl font-semibold">$20</span>
+                        <span className="hover:text-cyan-400 text-gray-400 cursor-pointer"><Bookmark size={24} /></span>
+                    </div>
+                </div>
+                <div className="mt-4 flex flex-col lg:flex-row lg:items-center gap-4">
+                    <div className="flex flex-wrap gap-2">
+                        {["Free", "New", "AI Assistant", "Popular"].map(t => (
+                            <span key={t} className={` text-[10px] px-0.5 py-px sm:px-2 sm:py-1 rounded flex items-center justify-center
+                                        ${["Free", "Paid", "Premium"].includes(t)
+                                    ? "bg-green-200 text-green-800"
+                                    : "bg-gray-600"} `} >
+                                {t}
+                            </span>
+                        ))}
+                    </div>
+                    <div className=" inline-flex items-center gap-1 text-sm text-gray-400">
+                        <Star size={14} className="text-yellow-400" fill="currentColor" />
+                        4.5 (8,921 reviews)
+                        <span className="ml-2 inline-flex items-center">
+                            <Users size={14} className="mr-1" /> 8M<Plus size={12} />
+                        </span>
                     </div>
                 </div>
 
@@ -61,27 +63,27 @@ export default function MainCard() {
                 </p>
 
                 <div className="flex items-center gap-4 mt-6">
-                    <Link href="#" className="px-6 py-2 rounded-md font-medium bg-linear-to-r
-                    from-cyan-400 to-blue-600">
+                    <Link href="#" className="px-8 py-2 rounded-md font-medium bg-linear-to-r
+                    from-cyan-400 to-blue-600 text-lg cursor-pointer">
                         Try Claude 3.5
                     </Link>
 
-                    <button className="px-4 py-2 rounded-md border border-white/15">
+                    <button className="p-3 rounded-md border border-gray-700 hover:bg-gray-800 text-gray-400 hover:text-white cursor-pointer">
                         <Heart />
                     </button>
-                    <button className="px-4 py-2 rounded-md border border-white/15">
+                    <button className="p-3 rounded-md border border-gray-700 hover:bg-gray-800 text-gray-400 hover:text-white cursor-pointer">
                         <Share2 />
                     </button>
                 </div>
             </div>
 
             {/* Preview image */}
-            <div className="h-64 lg:h-auto lg:flex-1 relative rounded-2xl bg-black/40 p-4">
+            <div className="relative rounded-2xl lg:rounded-2xl bg-black/40 p-0 lg:p-4 h-80 sm:h-96 lg:h-auto w-full">
                 <Image
                     src="/screenshots/claude.png"
                     alt="Claude preview"
                     fill
-                    className="rounded-md w-full object-cover"
+                    className="rounded-none lg:rounded-md object-cover"
                     loading="eager"
                     fetchPriority="high"
                 />
